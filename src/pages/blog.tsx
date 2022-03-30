@@ -1,7 +1,8 @@
 import React from 'react';
 import getPosts from '../scripts/fileSystem';
-import { PostItem } from '../components';
-import { Meta } from '../components/';
+import { PostItem, Meta, ColorfulHeader } from 'components';
+import { CardsGrid } from '.';
+import matter from 'gray-matter';
 
 type Props = {
   posts: any;
@@ -11,10 +12,12 @@ const Blog = ({ posts }: Props) => {
   return (
     <>
       <Meta title="Blog posts - PressBlog" />
-      <h1>All Posts</h1>
-      {posts.map((post: any) => (
-        <PostItem key={post.slug} post={post} />
-      ))}
+      <ColorfulHeader header="All Posts" emoji="📚" />
+      <CardsGrid>
+        {posts.map((post: any) => (
+          <PostItem key={post.slug} post={post} />
+        ))}
+      </CardsGrid>
     </>
   );
 };

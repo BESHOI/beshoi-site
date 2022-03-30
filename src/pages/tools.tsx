@@ -1,11 +1,14 @@
-import React from 'react'
+import { ColorfulHeader } from 'components';
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const Tools = (props: Props) => {
   return (
-    <div>tools</div>
-  )
-}
+    <>
+      <ColorfulHeader header="tools" emoji="📐📏" />
+    </>
+  );
+};
 
-export default Tools
+export default Tools;

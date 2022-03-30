@@ -1,11 +1,14 @@
-import React from 'react'
+import { ColorfulHeader } from 'components';
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <ColorfulHeader header="Contac Me" emoji="✨" />
+    </>
+  );
+};
 
-export default Contact
+export default Contact;

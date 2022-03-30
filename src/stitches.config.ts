@@ -10,6 +10,22 @@ import {
   indigoDark,
   crimson,
   crimsonDark,
+  tomato,
+  tomatoDark,
+  red,
+  redDark,
+  violet,
+  violetDark,
+  orange,
+  orangeDark,
+  cyan,
+  cyanDark,
+  yellow,
+  yellowDark,
+  lime,
+  limeDark,
+  pink,
+  pinkDark,
 } from '@radix-ui/colors';
 
 export const {
@@ -29,8 +45,16 @@ export const {
       ...blue,
       ...indigo,
       ...crimson,
+      ...tomato,
+      ...red,
+      ...violet,
+      ...orange,
+      ...cyan,
+      ...yellow,
+      ...lime,
+      ...pink,
 
-      text: '$slate11',
+      text: '$slate12',
       background: '$indigo1',
     },
     space: {
@@ -131,6 +155,7 @@ export const {
     bp7: '(min-width: 1800px)',
     light: '(prefers-color-scheme: light)',
     dark: '(prefers-color-scheme: dark)',
+    print: 'print',
   },
   utils: {
     m: (value: Stitches.ScaleValue<'space'>) => ({
@@ -193,8 +218,16 @@ export const darkTheme = createTheme({
     ...blueDark,
     ...indigoDark,
     ...crimsonDark,
+    ...tomatoDark,
+    ...redDark,
+    ...violetDark,
+    ...orangeDark,
+    ...cyanDark,
+    ...yellowDark,
+    ...limeDark,
+    ...pinkDark,
 
-    text: '$slate11',
+    text: '$slate12',
     background: '$indigo1',
   },
 });

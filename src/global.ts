@@ -99,7 +99,11 @@ export const globalStyles = globalCss({
     marginTop: 'var(--flow-spacer, 1em)',
   },
 
-  '@media print': {},
+  '@print': {
+    'header,footer': {
+      display: 'none',
+    },
+  },
 
   '@dark': {
     ':root:not(.light)': {

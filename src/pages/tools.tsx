@@ -24,7 +24,7 @@ const ListItem = styled('li', {
   alignItems: 'cneter',
   lineHeight: '1.5',
   alignContent: 'center',
-  fontSize: '$4',
+  fontSize: '$2',
 });
 
 const Link = styled('a', {

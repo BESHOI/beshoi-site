@@ -115,13 +115,25 @@ export const {
       gray600: 'hsl(206,10%,44%)',
     },
     fontSizes: {
-      1: '0.833rem',
-      2: '1rem',
-      3: '1.2rem',
-      4: '1.44rem',
-      5: '1.728rem',
-      6: '2.074rem',
-      7: '2.488rem',
+      // 1: '0.833rem',
+      // 2: '1rem',
+      // 3: '1.2rem',
+      // 4: '1.44rem',
+      // 5: '1.728rem',
+      // 6: '2.074rem',
+      // 7: '2.488rem',
+
+      0: 'clamp(0.96rem, calc(0.59rem + 0.52vw), 0.69rem)',
+
+      1: 'clamp(1.20rem, calc(0.69rem + 0.72vw), 0.83rem)',
+
+      2: ' clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem)',
+
+      3: 'clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem)',
+
+      4: 'clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem)',
+
+      5: 'clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem)',
     },
     fontWeights: {
       1: '300',

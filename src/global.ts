@@ -70,29 +70,37 @@ export const globalStyles = globalCss({
 
   // 'small, .text_small': { fontSize: '$1' },
 
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,24,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
   h1: {
-    fontSize: '$6',
+    fontSize: '$4',
+    fontWeight: '$7',
   },
   h2: {
-    fontSize: '$5',
+    fontSize: '$3',
+    fontWeight: '$5',
   },
   h3: {
-    fontSize: '$4',
+    fontSize: '$2',
+    fontWeight: '$7',
   },
   h4: {
-    fontSize: '$3',
+    fontSize: '$2',
+    fontWeight: '$4',
   },
   h5: {
     fontSize: '$2',
+    fontWeight: '$4',
   },
   h6: {
     fontSize: '$1',
+    fontWeight: '$3',
   },
   p: {
-    fontSize: '$2',
+    fontSize: '$1',
   },
 
-  'small, .text_small': { fontSize: '$0' },
+  'small, .text_small': { fontSize: '$0', fontWeight: '$3' },
 
   a: {
     color: 'inherit',
@@ -132,7 +140,8 @@ export const globalStyles = globalCss({
   '@dark': {
     ':root:not(.light)': {
       ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
-        const currentColor = darkTheme.colors[currentColorKey];
+        const currentColor =
+          darkTheme.colors[currentColorKey as keyof typeof darkTheme.colors];
         const currentColorValue =
           currentColor.value.substring(0, 1) === '$'
             ? `$colors${currentColor.value}`

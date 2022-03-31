@@ -6,12 +6,14 @@ import { Box } from '../Utils/Utils';
 type Props = {};
 
 const HiSection = styled('div', {
-  display: 'flex',
-  flexWrap: 'wrap',
-  gap: '$3',
+  // flexWrap: 'wrap',
+  // gap: '$3',
+  textAlign: 'center',
   alignItems: 'center',
   '@bp2': {
+    display: 'flex',
     gap: '$7',
+    textAlign: 'left',
   },
 
   '& h1, & h3': {
@@ -37,7 +39,9 @@ const AvatarContainer = styled('div', {
   position: 'relative',
   width: '75px',
   height: '75px',
+  mi: '$auto',
   '@bp2': {
+    mi: '$0',
     width: '100px',
     height: '100px',
   },

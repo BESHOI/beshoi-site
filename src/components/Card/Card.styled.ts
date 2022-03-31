@@ -41,9 +41,9 @@ export const CardSmall = styled('span', {
   color: '$slate10',
   fontSize: '$0',
   fontWeight: '$4',
-  '@bp2': {
-    fontSize: '$1',
-  },
+  // '@bp2': {
+  //   fontSize: '$1',
+  // },
 });
 
 export const CardParagraph = styled('p', { mb: '$0' });

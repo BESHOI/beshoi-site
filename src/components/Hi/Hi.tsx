@@ -35,9 +35,13 @@ const HiSection = styled('div', {
 
 const AvatarContainer = styled('div', {
   position: 'relative',
-  width: '100px',
-  height: '100px',
+  width: '75px',
+  height: '75px',
   '@bp2': {
+    width: '100px',
+    height: '100px',
+  },
+  '@bp3': {
     width: '150px',
     height: '150px',
   },

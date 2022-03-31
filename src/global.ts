@@ -30,45 +30,69 @@ export const globalStyles = globalCss({
     color: '$slate12',
   },
 
+  // h1: {
+  //   fontSize: '$6',
+  //   fontWeight: '$3',
+  //   letterSpacing: '-2px',
+  //   '@bp4': {
+  //     fontSize: '$7',
+  //   },
+  // },
+
+  // h2: {
+  //   fontSize: '$5',
+  //   fontWeight: '$1',
+  //   '@bp4': {
+  //     fontSize: '$6',
+  //   },
+  // },
+
+  // h3: {
+  //   fontSize: '$4',
+  //   fontWeight: '$2',
+  //   '@bp4': {
+  //     fontSize: '$5',
+  //   },
+  // },
+
+  // h4: {
+  //   fontSize: '$3',
+  //   '@bp4': {
+  //     fontSize: '$4',
+  //   },
+  // },
+
+  // h5: { fontSize: '$3' },
+
+  // p: {
+  //   fontSize: '$2',
+  // },
+
+  // 'small, .text_small': { fontSize: '$1' },
+
   h1: {
     fontSize: '$6',
-    fontWeight: '$3',
-    letterSpacing: '-2px',
-    '@bp4': {
-      fontSize: '$7',
-    },
   },
-
   h2: {
     fontSize: '$5',
-    fontWeight: '$1',
-    '@bp4': {
-      fontSize: '$6',
-    },
   },
-
   h3: {
     fontSize: '$4',
-    fontWeight: '$2',
-    '@bp4': {
-      fontSize: '$5',
-    },
   },
-
   h4: {
     fontSize: '$3',
-    '@bp4': {
-      fontSize: '$4',
-    },
   },
-
-  h5: { fontSize: '$3' },
-
+  h5: {
+    fontSize: '$2',
+  },
+  h6: {
+    fontSize: '$1',
+  },
   p: {
     fontSize: '$2',
   },
 
-  'small, .text_small': { fontSize: '$1' },
+  'small, .text_small': { fontSize: '$0' },
 
   a: {
     color: 'inherit',

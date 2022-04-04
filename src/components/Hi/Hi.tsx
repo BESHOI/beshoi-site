@@ -1,37 +1,30 @@
-import React from 'react';
 import { keyframes, styled } from '../../stitches.config';
 import Image from 'next/image';
 import { Box } from '../Utils/Utils';
+// import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
 
 type Props = {};
 
 const HiSection = styled('div', {
-  // flexWrap: 'wrap',
-  // gap: '$3',
   textAlign: 'center',
   alignItems: 'center',
   '@bp2': {
     display: 'flex',
-    gap: '$7',
+    gap: '$4',
     textAlign: 'left',
   },
 
-  '& h1, & h3': {
+  '& h1, & h2': {
     m: '$0',
   },
 
-  '& h1': {
-    '@bp2': {
-      fontSize: '3rem',
-    },
-  },
-  '& h3': {
+  '& h2': {
     backgroundImage: 'linear-gradient(45deg,$crimson9,$blue9)',
     color: 'transparent',
     backgroundClip: 'text',
-    '@bp2': {
-      fontSize: '2rem',
-    },
+    // backgroundSize: '400%',
+    // backgroundPosition: 'left',
+    // animation: `${GradientAnimation} 3s linear infinite alternate`,
   },
 });
 
@@ -55,25 +48,23 @@ const Avatar = styled(Image, {
   borderRadius: '$5',
 });
 
-const CoverContainer = styled('div', {
-  position: 'relative',
-  flexBasis: '100%',
-  height: 300,
-});
+// const CoverContainer = styled('div', {
+//   position: 'relative',
+//   flexBasis: '100%',
+//   height: 300,
+// });
 
-const Cover = styled(Image, {
-  borderRadius: '$1',
-});
+// const Cover = styled(Image, {
+//   borderRadius: '$1',
+// });
 
 const Rotate = keyframes({
   '0%': { transform: 'rotate(-45deg)' },
   '100%': { transform: 'rotate(0)' },
-  // '100%': { transform: 'rotate(90deg)' },
 });
 
 const Wave = styled('div', {
   display: 'inline-block',
-  // animation: `${Rotate} 1s alternate infinite`,
   animation: `${Rotate} 1s alternate`,
 });
 
@@ -84,13 +75,18 @@ export const Hi = (props: Props) => {
         <Cover src="/img/mac.jpg" alt="cover" layout="fill" objectFit="cover" />
       </CoverContainer> */}
       <AvatarContainer>
-        <Avatar src="/img/Beshoi.jpg" alt="profile-picture" layout="fill" />
+        <Avatar
+          src="/img/Beshoi.jpg"
+          alt="profile-picture"
+          layout="fill"
+          priority={true}
+        />
       </AvatarContainer>
       <Box>
         <h1>
           Hi, I&#39;m Beshoi Emad <Wave>👋</Wave>
         </h1>
-        <h3>Front End Developer</h3>
+        <h2>Front End Developer</h2>
       </Box>
     </HiSection>
   );

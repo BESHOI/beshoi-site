@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Flex } from 'components';
-import { styled } from 'stitches.config';
+import { styled, keyframes } from 'stitches.config';
 
 type Props = {
   header: string;
@@ -8,17 +8,21 @@ type Props = {
   css?: object;
 };
 
-const Header = styled('h1', {
-  color: 'transparent',
-  backgroundClip: 'text',
-  m: '$0',
-  lineHeight: '1',
-  backgroundImage: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)',
+export const GradientAnimation = keyframes({
+  '0%': { backgroundPosition: 'left' },
+  '100%': { backgroundPosition: 'right' },
 });
 
-const Emoji = styled('h2', {
-  lineHeight: '1',
+const Header = styled('h1', {
+  m: '$0',
+  color: 'transparent',
+  backgroundClip: 'text',
+  backgroundSize: '400%',
+  backgroundPosition: 'left',
+  animation: `${GradientAnimation} 3s linear infinite alternate`,
 });
+
+const Emoji = styled('h3', {});
 
 const Colorful = () => {
   const ColorsList = [
@@ -32,7 +36,6 @@ const Colorful = () => {
     '$pink',
     '$cyan',
     '$green',
-    '$bronze',
     '$plum',
     '$teal',
     '$sky',
@@ -42,18 +45,17 @@ const Colorful = () => {
     '$purple',
     '$tomato',
     '$amber',
-    '$gold',
     '$slate',
   ];
 
-  const AnglesList = [45, 90, 135, 180, 225, 270, 315, 360];
+  const AnglesList = [45, 90, 135, 225, 270, 315, 360];
   const RandomAngle = Math.floor(Math.random() * (AnglesList.length - 1));
   const Angle = AnglesList[RandomAngle] + 'deg';
 
   const RandomNumber = (min: number, max: number) =>
     Math.floor(Math.random() * (max - min + 1) + min);
   const RandomValue = () => Math.floor(Math.random() * (ColorsList.length - 1));
-  const Colors = ColorsList.map((color) => color + RandomNumber(7, 12));
+  const Colors = ColorsList.map((color) => color + RandomNumber(9, 11));
   const RandomColor = Colors[RandomValue()];
 
   return { RandomColor, Angle };

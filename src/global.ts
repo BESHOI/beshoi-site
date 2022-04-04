@@ -1,106 +1,68 @@
 import '../node_modules/modern-normalize/modern-normalize.css';
-import { globalCss, darkTheme } from './stitches.config';
 import '@fontsource/inter/variable.css';
+import { globalCss, darkTheme } from './stitches.config';
 
 export const globalStyles = globalCss({
-  '@font-face': {
-    fontFamily: 'interVariable',
-    fontVariationSettings: 'wght 400',
-    fontDisplay: 'optional',
-  },
-
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
-    blockSize: '100%',
+    display: 'block',
   },
-
+  
   body: {
     minBlockSize: '100%',
-    display: 'grid',
+    ' @supports (font-variation-settings: normal)': {
+      fontFamily: 'interVariable',
+      fontVariationSettings: 'wght 400',
+    },
     fontFamily: 'interVariable, sans-serif',
-    fontWeight: '$1',
+    fontDisplay: 'optional',
+    textRendering: 'optimizeSpeed',
+    fontWeight: '$2',
     lineHeight: '$3',
+    scrollBehavior: 'smooth',
     backgroundColor: '$background',
     color: '$text',
   },
 
   ' h1, h2, h3, h4, h5': {
     lineHeight: '$2',
-    color: '$slate12',
   },
 
-  // h1: {
-  //   fontSize: '$6',
-  //   fontWeight: '$3',
-  //   letterSpacing: '-2px',
-  //   '@bp4': {
-  //     fontSize: '$7',
-  //   },
-  // },
-
-  // h2: {
-  //   fontSize: '$5',
-  //   fontWeight: '$1',
-  //   '@bp4': {
-  //     fontSize: '$6',
-  //   },
-  // },
-
-  // h3: {
-  //   fontSize: '$4',
-  //   fontWeight: '$2',
-  //   '@bp4': {
-  //     fontSize: '$5',
-  //   },
-  // },
-
-  // h4: {
-  //   fontSize: '$3',
-  //   '@bp4': {
-  //     fontSize: '$4',
-  //   },
-  // },
-
-  // h5: { fontSize: '$3' },
-
-  // p: {
-  //   fontSize: '$2',
-  // },
-
-  // 'small, .text_small': { fontSize: '$1' },
-
-  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,24,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  /* @link https://utopia.fyi/type/calculator?c=280,14,1.2,1140,20,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
   h1: {
-    fontSize: '$4',
+    fontSize: '$5',
     fontWeight: '$7',
   },
   h2: {
+    fontSize: '$4',
+    fontWeight: '$6',
+  },
+  h3: {
     fontSize: '$3',
     fontWeight: '$5',
   },
-  h3: {
-    fontSize: '$2',
-    fontWeight: '$7',
-  },
   h4: {
-    fontSize: '$2',
+    fontSize: '$3',
     fontWeight: '$4',
   },
   h5: {
-    fontSize: '$2',
+    fontSize: '$3',
     fontWeight: '$4',
   },
   h6: {
-    fontSize: '$1',
+    fontSize: '$2',
     fontWeight: '$3',
   },
   p: {
-    fontSize: '$1',
+    fontSize: '$2',
   },
 
-  'small, .text_small': { fontSize: '$0', fontWeight: '$3' },
+  small: {
+    fontSize: '$0',
+    fontWeight: '$3',
+  },
 
   a: {
     color: 'inherit',
@@ -120,11 +82,8 @@ export const globalStyles = globalCss({
   },
 
   '.active': {
-    color: '$blackA12',
-    '@dark': {
-      color: '$whiteA12',
-    },
-    fontWeight: '$2',
+    color: '$slate12',
+    fontWeight: '$4',
   },
 
   '.flow > *:where(:not(:first-child)) ': {

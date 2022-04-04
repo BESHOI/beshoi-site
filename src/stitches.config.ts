@@ -2,8 +2,6 @@ import * as Stitches from '@stitches/react';
 import {
   slate,
   slateDark,
-  whiteA,
-  blackA,
   blue,
   blueDark,
   indigo,
@@ -42,10 +40,6 @@ import {
   skyDark,
   amber,
   amberDark,
-  gold,
-  goldDark,
-  bronze,
-  bronzeDark,
 } from '@radix-ui/colors';
 
 export const {
@@ -60,11 +54,9 @@ export const {
   theme: {
     colors: {
       ...slate,
-      ...whiteA,
-      ...blackA,
-      ...blue,
       ...indigo,
       ...crimson,
+      ...blue,
       ...tomato,
       ...red,
       ...violet,
@@ -81,8 +73,6 @@ export const {
       ...purple,
       ...sky,
       ...amber,
-      ...gold,
-      ...bronze,
 
       text: '$slate12',
       background: '$indigo1',
@@ -90,50 +80,24 @@ export const {
     space: {
       auto: 'auto',
       0: '0',
-      1: '.25rem',
-      2: '.5rem',
-      3: '1rem',
-      4: '1.25rem',
-      5: '1.5rem',
-      6: '1.75rem',
-      7: '2rem',
-      8: '3rem',
-      9: '4rem',
-      10: '5rem',
-      11: '7.5rem',
-      12: ' 10rem',
-      13: '15rem',
-      14: '20rem',
-      15: ' 30rem',
+      1: 'clamp(0.25rem, calc(0.23rem + 0.12vw), 0.31rem)',
+      2: 'clamp(0.44rem, calc(0.38rem + 0.35vw), 0.63rem)',
+      3: 'clamp(0.69rem, calc(0.61rem + 0.47vw), 0.94rem)',
+      4: 'clamp(0.88rem, calc(0.75rem + 0.70vw), 1.25rem)',
+      5: 'clamp(1.31rem, calc(1.13rem + 1.05vw), 1.88rem)',
+      6: 'clamp(1.75rem, calc(1.51rem + 1.40vw), 2.50rem)',
+      7: 'clamp(2.63rem, calc(2.26rem + 2.09vw), 3.75rem)',
+      8: 'clamp(3.50rem, calc(3.01rem + 2.79vw), 5.00rem)',
+      9: 'clamp(5.25rem, calc(4.52rem + 4.19vw), 7.50rem)',
     },
-    shadows: {
-      gray100: 'hsl(206,22%,99%)',
-      gray200: 'hsl(206,12%,97%)',
-      gray300: 'hsl(206,11%,92%)',
-      gray400: 'hsl(206,10%,84%)',
-      gray500: 'hsl(206,10%,76%)',
-      gray600: 'hsl(206,10%,44%)',
-    },
+    shadows: {},
     fontSizes: {
-      // 1: '0.833rem',
-      // 2: '1rem',
-      // 3: '1.2rem',
-      // 4: '1.44rem',
-      // 5: '1.728rem',
-      // 6: '2.074rem',
-      // 7: '2.488rem',
-
-      0: 'clamp(0.96rem, calc(0.59rem + 0.52vw), 0.69rem)',
-
-      1: 'clamp(1.20rem, calc(0.69rem + 0.72vw), 0.83rem)',
-
-      2: ' clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem)',
-
-      3: 'clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem)',
-
-      4: 'clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem)',
-
-      5: 'clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem)',
+      0: 'clamp(0.80rem, calc(0.54rem + 0.36vw), 0.61rem)',
+      1: 'clamp(1.00rem, calc(0.64rem + 0.50vw), 0.73rem)',
+      2: 'clamp(0.88rem, calc(0.75rem + 0.70vw), 1.25rem)',
+      3: 'clamp(1.05rem, calc(0.88rem + 0.95vw), 1.56rem)',
+      4: 'clamp(1.26rem, calc(1.03rem + 1.29vw), 1.95rem)',
+      5: 'clamp(1.51rem, calc(1.21rem + 1.73vw), 2.44rem)',
     },
     fontWeights: {
       1: '300',
@@ -152,21 +116,17 @@ export const {
     },
     letterSpacings: {},
     sizes: {
-      1: '.25rem',
-      2: '.5rem',
-      3: '1rem',
-      4: '1.25rem',
-      5: '1.5rem',
-      6: '1.75rem',
-      7: '2rem',
-      8: '3rem',
-      9: '4rem',
-      10: '5rem',
-      11: '7.5rem',
-      12: ' 10rem',
-      13: '15rem',
-      14: '20rem',
-      15: ' 30rem',
+      auto: 'auto',
+      0: '0',
+      1: 'clamp(0.25rem, calc(0.20rem + 0.24vw), 0.38rem)',
+      2: 'clamp(0.50rem, calc(0.43rem + 0.37vw), 0.69rem)',
+      3: 'clamp(0.75rem, calc(0.63rem + 0.61vw), 1.06rem)',
+      4: 'clamp(1.00rem, calc(0.85rem + 0.73vw), 1.38rem)',
+      5: 'clamp(1.50rem, calc(1.28rem + 1.10vw), 2.06rem)',
+      6: 'clamp(2.00rem, calc(1.71rem + 1.46vw), 2.75rem)',
+      7: 'clamp(3.00rem, calc(2.56rem + 2.20vw), 4.13rem)',
+      8: 'clamp(4.00rem, calc(3.41rem + 2.93vw), 5.50rem)',
+      9: 'clamp(6.00rem, calc(5.12rem + 4.39vw), 8.25rem)',
     },
     borderWidths: {
       1: '1px',
@@ -191,7 +151,15 @@ export const {
       5: '99999',
     },
     transitions: {
-      1: 'all .3s ease',
+      //ease
+      1: 'all cubic-bezier(.25, 0, .5, 1)',
+      2: 'all cubic-bezier(.25, 0, .4, 1)',
+      //ease-in
+      3: 'all cubic-bezier(.25, 0, 1, 1)',
+      4: 'all cubic-bezier(.50, 0, 1, 1)',
+      //ease-in-out
+      5: 'all cubic-bezier(0, 0, .75, 1)',
+      6: 'all cubic-bezier(0, 0, .50, 1)',
     },
   },
   media: {
@@ -204,6 +172,7 @@ export const {
     bp7: '(min-width: 1800px)',
     light: '(prefers-color-scheme: light)',
     dark: '(prefers-color-scheme: dark)',
+    hover: '(hover: hover)',
     print: 'print',
   },
   utils: {
@@ -262,11 +231,9 @@ export const {
 export const darkTheme = createTheme({
   colors: {
     ...slateDark,
-    ...whiteA,
-    ...blackA,
     ...blueDark,
-    ...indigoDark,
     ...crimsonDark,
+    ...indigoDark,
     ...tomatoDark,
     ...redDark,
     ...violetDark,
@@ -283,10 +250,5 @@ export const darkTheme = createTheme({
     ...purpleDark,
     ...skyDark,
     ...amberDark,
-    ...goldDark,
-    ...bronzeDark,
-
-    text: '$slate12',
-    background: '$indigo1',
   },
 });

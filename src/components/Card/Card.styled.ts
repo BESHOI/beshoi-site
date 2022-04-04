@@ -1,10 +1,34 @@
 import { styled } from 'stitches.config';
 import Image from 'next/image';
 
+export const CardsGrid = styled('div', {
+  display: 'grid',
+  gridGap: '$5',
+
+  '&>:nth-child(3n - 2)': {
+    backgroundColor: '$blue2',
+    '& h3': {
+      color: '$blue11',
+    },
+  },
+  '&>:nth-child(3n - 1)': {
+    backgroundColor: '$crimson2',
+    '& h3': {
+      color: '$crimson11',
+    },
+  },
+  '&>:nth-child(3n)': {
+    backgroundColor: '$cyan2',
+    '& h3': {
+      color: '$cyan11',
+    },
+  },
+});
+
 export const CardSection = styled('div', {
   borderRadius: '$3',
   py: '$3',
-  px: '$7',
+  px: '$5',
 });
 
 export const Card = styled('div', {
@@ -38,12 +62,9 @@ export const CardHeader = styled('h3', {
 
 export const CardSmall = styled('span', {
   mt: '$0',
-  color: '$slate10',
+  color: '$slate11',
   fontSize: '$0',
-  fontWeight: '$4',
-  // '@bp2': {
-  //   fontSize: '$1',
-  // },
+  fontWeight: '$3',
 });
 
 export const CardParagraph = styled('p', { mb: '$0' });

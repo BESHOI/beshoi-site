@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, ColorfulHeader } from 'components';
 import { Icon } from '@iconify/react';
 import { styled } from 'stitches.config';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 type Props = {};
 
@@ -19,11 +19,10 @@ const List = styled('ul', {
 const ListHeader = styled('h3', { m: '$0' });
 
 const ListItem = styled('li', {
-  display: 'flex',
-  gap: '$2',
-  alignItems: 'cneter',
-  lineHeight: '1.5',
-  alignContent: 'center',
+  display: 'grid',
+  gridTemplateColumns: '25px 1fr',
+  alignItems: 'center',
+  gridGap: '$2',
   fontSize: '$2',
 });
 
@@ -111,7 +110,6 @@ const Tools = (props: Props) => {
             </ListItem>
           </List>
         </Box>
-
       </Lists>
     </>
   );

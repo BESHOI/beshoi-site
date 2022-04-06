@@ -22,7 +22,7 @@ const Header = styled('h1', {
   animation: `${GradientAnimation} 3s linear infinite alternate`,
 });
 
-const Emoji = styled('h3', {});
+const Emoji = styled('span', { fontSize: '$3' });
 
 const Colorful = () => {
   const ColorsList = [

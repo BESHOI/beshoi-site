@@ -1,9 +1,11 @@
 import { styled } from 'stitches.config';
 import Image from 'next/image';
+import { Icon } from '@iconify/react';
 
 export const CardsGrid = styled('div', {
   display: 'grid',
   gridGap: '$5',
+  mt: '$2',
 
   '&>:nth-child(3n - 2)': {
     backgroundColor: '$blue2',
@@ -63,7 +65,7 @@ export const CardHeader = styled('h3', {
 export const CardSmall = styled('span', {
   mt: '$0',
   color: '$slate11',
-  fontSize: '$0',
+  fontSize: '$1',
   fontWeight: '$3',
 });
 
@@ -83,4 +85,9 @@ export const CardImage = styled(Image, {
   '@bp1': {
     borderRadius: '$2',
   },
+});
+
+export const CardIcon = styled(Icon, {
+  fontSize: '$3',
+  color: '$cyan9',
 });

@@ -8,7 +8,7 @@ export const globalStyles = globalCss({
   html: {
     display: 'block',
   },
-  
+
   body: {
     minBlockSize: '100%',
     ' @supports (font-variation-settings: normal)': {
@@ -60,7 +60,7 @@ export const globalStyles = globalCss({
   },
 
   small: {
-    fontSize: '$0',
+    fontSize: '$1',
     fontWeight: '$3',
   },
 
@@ -75,8 +75,9 @@ export const globalStyles = globalCss({
     height: '100vh',
     gap: '$4',
     display: 'grid',
-    gridTemplate: `50px 1fr 50px /100%`,
+    gridTemplate: `50px 1fr 80px /100%`,
   },
+
   main: {
     width: '100%',
   },
@@ -88,6 +89,15 @@ export const globalStyles = globalCss({
 
   '.flow > *:where(:not(:first-child)) ': {
     marginTop: 'var(--flow-spacer, 1em)',
+  },
+
+  '*,*::before,*::after': {
+    '@motion': {
+      animationDuration: '1ms !important',
+      animationIterationCount: '1 !important',
+      transitionDuration: '1ms !important',
+      scrollBehavior: 'auto !important',
+    },
   },
 
   '@print': {

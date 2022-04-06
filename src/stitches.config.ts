@@ -172,6 +172,7 @@ export const {
     bp7: '(min-width: 1800px)',
     light: '(prefers-color-scheme: light)',
     dark: '(prefers-color-scheme: dark)',
+    motion: '(prefers-reduced-motion: reduce)',
     hover: '(hover: hover)',
     print: 'print',
   },

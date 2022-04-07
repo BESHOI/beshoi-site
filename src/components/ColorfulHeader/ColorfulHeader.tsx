@@ -17,9 +17,12 @@ const Header = styled('h1', {
   m: '$0',
   color: 'transparent',
   backgroundClip: 'text',
-  backgroundSize: '400%',
-  backgroundPosition: 'left',
-  animation: `${GradientAnimation} 3s linear infinite alternate`,
+  '&:hover': {
+    '@hover': {
+      backgroundSize: '400%',
+      animation: `${GradientAnimation} 2s linear infinite alternate`,
+    },
+  },
 });
 
 const Emoji = styled('span', { fontSize: '$3' });

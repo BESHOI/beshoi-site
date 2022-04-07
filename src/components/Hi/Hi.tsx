@@ -1,7 +1,7 @@
 import { keyframes, styled } from '../../stitches.config';
 import Image from 'next/image';
 import { Box } from '../Utils/Utils';
-// import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
+import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
 
 type Props = {};
 
@@ -22,9 +22,12 @@ const HiSection = styled('div', {
     backgroundImage: 'linear-gradient(45deg,$crimson9,$blue9)',
     color: 'transparent',
     backgroundClip: 'text',
-    // backgroundSize: '400%',
-    // backgroundPosition: 'left',
-    // animation: `${GradientAnimation} 3s linear infinite alternate`,
+    '&:hover': {
+      '@hover': {
+        backgroundSize: '400%',
+        animation: `${GradientAnimation} 2s linear infinite alternate`,
+      },
+    },
   },
 });
 
@@ -48,16 +51,6 @@ const Avatar = styled(Image, {
   borderRadius: '$5',
 });
 
-// const CoverContainer = styled('div', {
-//   position: 'relative',
-//   flexBasis: '100%',
-//   height: 300,
-// });
-
-// const Cover = styled(Image, {
-//   borderRadius: '$1',
-// });
-
 const Rotate = keyframes({
   '0%': { transform: 'rotate(-45deg)' },
   '100%': { transform: 'rotate(0)' },
@@ -71,15 +64,12 @@ const Wave = styled('div', {
 export const Hi = (props: Props) => {
   return (
     <HiSection>
-      {/* <CoverContainer>
-        <Cover src="/img/mac.jpg" alt="cover" layout="fill" objectFit="cover" />
-      </CoverContainer> */}
       <AvatarContainer>
         <Avatar
           src="/img/Beshoi.jpg"
           alt="profile-picture"
           layout="fill"
-          priority={true}
+          objectFit="contain"
         />
       </AvatarContainer>
       <Box>

@@ -16,7 +16,6 @@ export const globalStyles = globalCss({
       fontVariationSettings: 'wght 400',
     },
     fontFamily: 'interVariable, sans-serif',
-    fontDisplay: 'optional',
     textRendering: 'optimizeSpeed',
     fontWeight: '$2',
     lineHeight: '$3',

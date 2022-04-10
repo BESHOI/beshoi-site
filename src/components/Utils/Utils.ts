@@ -1,6 +1,4 @@
-import { styled } from '../../stitches.config';
-
-type Props = {};
+import { styled } from 'stitches.config';
 
 export const Box = styled('div', {});
 export const Flex = styled('div', { display: 'flex' });

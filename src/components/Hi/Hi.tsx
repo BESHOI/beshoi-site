@@ -1,4 +1,4 @@
-import { keyframes, styled } from '../../stitches.config';
+import { keyframes, styled } from 'stitches.config';
 import Image from 'next/image';
 import { Box } from '../Utils/Utils';
 import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
@@ -8,10 +8,16 @@ type Props = {};
 const HiSection = styled('div', {
   textAlign: 'center',
   alignItems: 'center',
+
   '@bp2': {
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: '100px 1fr',
     gap: '$4',
     textAlign: 'left',
+  },
+
+  '@bp3': {
+    gridTemplateColumns: '150px 1fr',
   },
 
   '& h1, & h2': {
@@ -69,7 +75,8 @@ export const Hi = (props: Props) => {
           src="/img/Beshoi.jpg"
           alt="profile-picture"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
+          priority
         />
       </AvatarContainer>
       <Box>

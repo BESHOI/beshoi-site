@@ -5,6 +5,10 @@ import getPosts from '../scripts/fileSystem';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
 
+type Props = {
+  posts: [];
+};
+
 const HomeSection = styled('section', {
   display: 'grid',
   gridGap: '$3',
@@ -18,7 +22,7 @@ const Box = styled('div', {
   mt: '$4',
 });
 
-const Home: NextPage = ({ posts }: any) => {
+const Home: NextPage<Props> = ({ posts }) => {
   const Posts = posts.slice().map((obj: any) => {
     return { ...obj, date: new Date(obj.data.date) };
   });
@@ -52,7 +56,7 @@ const Home: NextPage = ({ posts }: any) => {
         <Box>
           <ColorfulHeader header="Latest Posts" emoji="📚" />
           <CardsGrid>
-            {sortedPosts.map((post: any) => (
+            {sortedPosts.map((post) => (
               <PostItem key={post.slug} post={post} />
             ))}
           </CardsGrid>

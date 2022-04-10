@@ -34,9 +34,8 @@ export const PostItem = ({ post }: Props) => {
               src={`/img/posts/${img}`}
               alt={title}
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               quality={15}
-              priority
             />
           </Link>
         </s.CardImageContainer>

@@ -13,7 +13,7 @@ export const GradientAnimation = keyframes({
   '100%': { backgroundPosition: 'right' },
 });
 
-const Header = styled('h1', {
+const Header = styled('h2', {
   m: '$0',
   color: 'transparent',
   backgroundClip: 'text',

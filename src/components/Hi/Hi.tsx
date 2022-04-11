@@ -8,6 +8,7 @@ type Props = {};
 const HiSection = styled('div', {
   textAlign: 'center',
   alignItems: 'center',
+  mt: '$3',
 
   '@bp2': {
     display: 'grid',

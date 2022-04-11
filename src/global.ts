@@ -10,8 +10,6 @@ export const globalStyles = globalCss({
     fontDisplay: 'optional',
   },
 
-  // https://simonhearne.com/2021/layout-shifts-webfonts/
-
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
@@ -74,12 +72,14 @@ export const globalStyles = globalCss({
   },
 
   '.container': {
-    width: 'min(100% - 2rem, 56.25rem)',
+    // width: 'min(100% - 2rem, 56.25rem)',
+    maxWidth: '56.25rem',
     mi: '$auto',
     height: '100vh',
-    gap: '$4',
-    display: 'grid',
-    gridTemplate: `50px 1fr 80px`,
+    p: '$4',
+    // display: 'grid',
+    // gridTemplate: `50px 1fr 80px / 1fr`,
+    // gap: '$4',
   },
 
   main: {

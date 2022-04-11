@@ -74,8 +74,9 @@ export const Hi = (props: Props) => {
         <Avatar
           src="/img/Beshoi.jpg"
           alt="profile-picture"
-          layout="fill"
-          objectFit="cover"
+          layout="responsive"
+          width="75px"
+          height="75px"
           priority
         />
       </AvatarContainer>

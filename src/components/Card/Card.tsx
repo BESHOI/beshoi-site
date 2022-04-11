@@ -24,7 +24,7 @@ export const Card = ({ data }: Props) => {
         <s.CardsGrid>
           {experience.map((item) => (
             <s.CardSection key={item.date}>
-              <Flex css={{ gap: '$1' }}>
+              <Flex css={{ gap: '$1', flexWrap: 'wrap' }}>
                 <s.CardSmall>{item.date}</s.CardSmall>
                 <s.CardSmall>/ {item.company}</s.CardSmall>
               </Flex>

@@ -3,6 +3,15 @@ import '@fontsource/inter/variable.css';
 import { globalCss, darkTheme } from './stitches.config';
 
 export const globalStyles = globalCss({
+  '@font-face': {
+    fontFamily: 'Inter-fallback',
+    src: "local('Arial')",
+    fontWeight: 'normal',
+    fontDisplay: 'optional',
+  },
+
+  // https://simonhearne.com/2021/layout-shifts-webfonts/
+
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
@@ -11,11 +20,7 @@ export const globalStyles = globalCss({
 
   body: {
     minBlockSize: '100%',
-    ' @supports (font-variation-settings: normal)': {
-      fontFamily: 'interVariable',
-      fontVariationSettings: 'wght 400',
-    },
-    fontFamily: 'interVariable, sans-serif',
+    fontFamily: `'interVariable', 'Inter-fallback'`,
     textRendering: 'optimizeSpeed',
     fontWeight: '$2',
     lineHeight: '$3',
@@ -74,7 +79,7 @@ export const globalStyles = globalCss({
     height: '100vh',
     gap: '$4',
     display: 'grid',
-    gridTemplate: `50px 1fr 80px /100%`,
+    gridTemplate: `50px 1fr 80px`,
   },
 
   main: {

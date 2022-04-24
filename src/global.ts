@@ -42,7 +42,7 @@ export const globalStyles = globalCss({
     lineHeight: '$2',
   },
 
-  /* @link https://utopia.fyi/type/calculator?c=280,14,1.2,1140,20,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,20,1.25,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
   h1: {
     fontSize: '$5',
@@ -85,12 +85,13 @@ export const globalStyles = globalCss({
   '.container': {
     // width: 'min(100% - 2rem, 56.25rem)',
     maxWidth: '56.25rem',
+    p: '$4',
     mi: '$auto',
     height: '100vh',
-    p: '$4',
-    // display: 'grid',
+    display: 'grid',
     // gridTemplate: `50px 1fr 80px / 1fr`,
-    // gap: '$4',
+    gridTemplate: `auto 1fr auto / 1fr`,
+    gap: '$4',
   },
 
   main: {

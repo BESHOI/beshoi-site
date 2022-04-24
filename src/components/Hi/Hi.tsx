@@ -6,20 +6,20 @@ import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
 type Props = {};
 
 const HiSection = styled('div', {
-  textAlign: 'center',
-  alignItems: 'center',
+  // textAlign: 'center',
+  // alignItems: 'center',
   mt: '$3',
 
   '@bp2': {
     display: 'grid',
-    gridTemplateColumns: '100px 1fr',
-    gap: '$4',
+    gridTemplateColumns: 'minmax(75px,100px)  max-content',
     textAlign: 'left',
+    gap: '$4',
   },
 
-  '@bp3': {
-    gridTemplateColumns: '150px 1fr',
-  },
+  // '@bp3': {
+  //   gridTemplateColumns: '150px 1fr',
+  // },
 
   '& h1, & h2': {
     m: '$0',
@@ -42,13 +42,14 @@ const AvatarContainer = styled('div', {
   position: 'relative',
   width: '75px',
   height: '75px',
-  mi: '$auto',
+  objectFit: 'cover',
+  // mi: '$auto',
   '@bp2': {
     mi: '$0',
     width: '100px',
     height: '100px',
   },
-  '@bp3': {
+  '@bp6': {
     width: '150px',
     height: '150px',
   },
@@ -68,22 +69,20 @@ const Wave = styled('div', {
   animation: `${Rotate} 1s alternate`,
 });
 
-export const Hi = (props: Props) => {
+export const Hi = () => {
   return (
     <HiSection>
       <AvatarContainer>
         <Avatar
           src="/img/Beshoi.jpg"
           alt="profile-picture"
-          layout="responsive"
-          width="75px"
-          height="75px"
+          layout="fill"
           priority
         />
       </AvatarContainer>
       <Box>
         <h1>
-          Hi, I&#39;m Beshoi Emad <Wave>👋</Wave>
+          Hi, I&#39;m Beshoi <Wave>👋</Wave>
         </h1>
         <h2>Front End Developer</h2>
       </Box>

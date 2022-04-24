@@ -28,7 +28,7 @@ export const PostItem = ({ post }: Props) => {
           </s.CardHeader>
           <s.CardParagraph>{excerpt}</s.CardParagraph>
         </s.CardText>
-        <s.CardImageContainer>
+        {/* <s.CardImageContainer>
           <Link href={`/blog/posts/${slug}`} passHref>
             <s.CardImage
               src={`/img/posts/${img}`}
@@ -38,7 +38,7 @@ export const PostItem = ({ post }: Props) => {
               quality={15}
             />
           </Link>
-        </s.CardImageContainer>
+        </s.CardImageContainer> */}
       </s.Card>
     </>
   );

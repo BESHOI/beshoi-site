@@ -34,15 +34,15 @@ export const CardSection = styled('div', {
 });
 
 export const Card = styled('div', {
-  display: 'grid',
-  maxWidth: '500px',
-  mi: '$auto',
+  // display: 'grid',
+  // maxWidth: '500px',
+  // mi: '$auto',
   borderRadius: '$3',
   '@bp2': {
-    maxWidth: '100%',
-    mi: '$0',
-    gridTemplateColumns: '3fr 1fr',
-    gridTemplateRows: '200px',
+    // maxWidth: '100%',
+    // mi: '$0',
+    // gridTemplateColumns: '3fr 1fr',
+    // gridTemplateRows: '200px',
     py: '$2',
     px: '$3',
   },
@@ -52,7 +52,7 @@ export const Card = styled('div', {
 });
 
 export const CardText = styled('div', {
-  maxWidth: '55ch',
+  // maxWidth: '55ch',
   py: '$3',
   px: '$3',
 });
@@ -69,7 +69,7 @@ export const CardSmall = styled('span', {
   fontWeight: '$3',
 });
 
-export const CardParagraph = styled('p', { mb: '$0' });
+export const CardParagraph = styled('p', { mb: '$0', mt: '$2' });
 
 export const CardImageContainer = styled('div', {
   position: 'relative',

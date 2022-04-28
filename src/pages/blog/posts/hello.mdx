@@ -7,7 +7,7 @@ img: 'hi/office.jpg'
 ---
 
 import Image from 'next/image';
-import { Meta } from 'components';
+import { Meta, ColorfulSpan } from 'components';
 
 <Meta />
 
@@ -19,10 +19,21 @@ import { Meta } from 'components';
   alt="Post Image"
   priority
   placeholder={'blur'}
+  quality={30}
   blurDataURL
 />
 
 # Hi :)
+
+<p>
+  <ColorfulSpan text="Lorem ipsum" color="$crimson5" /> It is simple to learn,
+  It has an extensive community
+</p>
+
+<p>
+  <ColorfulSpan text="Lorem ipsum" color="$green5" /> It is simple to learn, It
+  has an extensive community
+</p>
 
 ### Benefits of using React Navigation
 
@@ -30,13 +41,3 @@ import { Meta } from 'components';
 2. It is simple to learn
 3. It has an extensive community
 4. And more and more
-
-<Image
-  src="/img/posts/hi/project-1.jpg"
-  width={400}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  placeholder={'blur'}
-  blurDataURL
-/>

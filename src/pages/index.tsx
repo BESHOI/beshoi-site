@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Card, ColorfulHeader, Hi, PostItem } from 'components';
+import Link from 'next/link';
 import getPosts from '../scripts/fileSystem';
+import { Card, ColorfulHeader, Hi, PostItem } from 'components';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
 
@@ -11,8 +12,7 @@ type Props = {
 
 const HomeSection = styled('section', {
   display: 'grid',
-  gridGap: '$3',
-  mt: '$4',
+  gridGap: '$4',
   '& h1': {
     mb: '$0',
   },
@@ -20,6 +20,16 @@ const HomeSection = styled('section', {
 
 const Box = styled('div', {
   mt: '$4',
+});
+
+const SeeMore = styled('p', {
+  ml: '$2',
+  fontWeight: '$3',
+  '&:hover': {
+    '@hover': {
+      textDecoration: 'underline',
+    },
+  },
 });
 
 const Home: NextPage<Props> = ({ posts }) => {
@@ -48,10 +58,10 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Card data="about" />
         </Box>
 
-        <Box>
+        {/* <Box>
           <ColorfulHeader header="Experience" emoji="🤵" />
           <Card data="experience" />
-        </Box>
+        </Box> */}
 
         <Box>
           <ColorfulHeader header="Latest Posts" emoji="📚" />
@@ -60,6 +70,9 @@ const Home: NextPage<Props> = ({ posts }) => {
               <PostItem key={post.slug} post={post} />
             ))}
           </CardsGrid>
+          <SeeMore>
+            <Link href="/blog">See More Posts &#8599;</Link>
+          </SeeMore>
         </Box>
       </HomeSection>
     </>

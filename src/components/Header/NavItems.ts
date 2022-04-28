@@ -1,8 +1,8 @@
 export const navItems = [
-  {
-    link: '/',
-    name: 'Home',
-  },
+  // {
+  //   link: '/',
+  //   name: 'Home',
+  // },
   {
     link: '/blog',
     name: 'Blog',
@@ -11,8 +11,8 @@ export const navItems = [
     link: '/tools',
     name: 'Tools ',
   },
-  {
-    link: '/contact',
-    name: 'Contact',
-  },
+  // {
+  //   link: '/contact',
+  //   name: 'Contact',
+  // },
 ];

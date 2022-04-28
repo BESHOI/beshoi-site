@@ -1,5 +1,5 @@
 import '../node_modules/modern-normalize/modern-normalize.css';
-import { globalCss, darkTheme } from './stitches.config';
+import { globalCss } from './stitches.config';
 
 export const globalStyles = globalCss({
   '@font-face': {
@@ -16,20 +16,22 @@ export const globalStyles = globalCss({
 
   html: {
     display: 'block',
+    height: '100%',
   },
 
   body: {
     minBlockSize: '100%',
-    fontFamily: `'interVariable',
+    minHeight: ' 100%',
+    fontFamily: `'InterVariable',
     system-ui,
-		-apple-system,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji'`,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji`,
     textRendering: 'optimizeSpeed',
     fontWeight: '$2',
     lineHeight: '$3',
@@ -82,16 +84,19 @@ export const globalStyles = globalCss({
     textDecoration: 'none',
   },
 
+  '#__next': {
+    minHeight: '100vh',
+  },
+
   '.container': {
     // width: 'min(100% - 2rem, 56.25rem)',
     maxWidth: '56.25rem',
     p: '$4',
     mi: '$auto',
-    height: '100vh',
+    minHeight: '100vh',
     display: 'grid',
-    // gridTemplate: `50px 1fr 80px / 1fr`,
-    gridTemplate: `auto 1fr auto / 1fr`,
-    gap: '$4',
+    gridTemplate: `70px 1fr auto / 1fr`,
+    gap: '$6',
   },
 
   main: {
@@ -113,30 +118,6 @@ export const globalStyles = globalCss({
       animationIterationCount: '1 !important',
       transitionDuration: '1ms !important',
       scrollBehavior: 'auto !important',
-    },
-  },
-
-  '@print': {
-    'header,footer': {
-      display: 'none',
-    },
-  },
-
-  '@dark': {
-    ':root:not(.light)': {
-      ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
-        const currentColor =
-          darkTheme.colors[currentColorKey as keyof typeof darkTheme.colors];
-        const currentColorValue =
-          currentColor.value.substring(0, 1) === '$'
-            ? `$colors${currentColor.value}`
-            : currentColor.value;
-
-        return {
-          [currentColor.variable]: currentColorValue,
-          ...varSet,
-        };
-      }, {}),
     },
   },
 });

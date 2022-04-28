@@ -6,20 +6,10 @@ import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
 type Props = {};
 
 const HiSection = styled('div', {
-  // textAlign: 'center',
-  // alignItems: 'center',
-  mt: '$3',
-
-  '@bp2': {
-    display: 'grid',
-    gridTemplateColumns: 'minmax(75px,100px)  max-content',
-    textAlign: 'left',
-    gap: '$4',
-  },
-
-  // '@bp3': {
-  //   gridTemplateColumns: '150px 1fr',
-  // },
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '$4',
+  alignItems: 'center',
 
   '& h1, & h2': {
     m: '$0',
@@ -38,26 +28,25 @@ const HiSection = styled('div', {
   },
 });
 
-const AvatarContainer = styled('div', {
-  position: 'relative',
-  width: '75px',
-  height: '75px',
-  objectFit: 'cover',
-  // mi: '$auto',
-  '@bp2': {
-    mi: '$0',
-    width: '100px',
-    height: '100px',
-  },
-  '@bp6': {
-    width: '150px',
-    height: '150px',
-  },
-});
+// const AvatarContainer = styled('div', {
+//   position: 'relative',
+//   width: '75px',
+//   height: '75px',
+//   objectFit: 'contain',
+//   '@bp2': {
+//     mi: '$0',
+//     width: '100px',
+//     height: '100px',
+//   },
+//   '@bp3': {
+//     width: '125px',
+//     height: '125px',
+//   },
+// });
 
-const Avatar = styled(Image, {
-  borderRadius: '$5',
-});
+// const Avatar = styled(Image, {
+//   borderRadius: '$5',
+// });
 
 const Rotate = keyframes({
   '0%': { transform: 'rotate(-45deg)' },
@@ -72,14 +61,15 @@ const Wave = styled('div', {
 export const Hi = () => {
   return (
     <HiSection>
-      <AvatarContainer>
+      {/* <AvatarContainer>
         <Avatar
           src="/img/Beshoi.jpg"
           alt="profile-picture"
           layout="fill"
+          objectFit="contain"
           priority
         />
-      </AvatarContainer>
+      </AvatarContainer> */}
       <Box>
         <h1>
           Hi, I&#39;m Beshoi <Wave>👋</Wave>

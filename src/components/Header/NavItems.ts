@@ -11,8 +11,8 @@ export const navItems = [
     link: '/tools',
     name: 'Tools ',
   },
-  // {
-  //   link: '/contact',
-  //   name: 'Contact',
-  // },
+  {
+    link: '/about',
+    name: 'About',
+  },
 ];

@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import getPosts from '../scripts/fileSystem';
-import { Card, ColorfulHeader, Hi, PostItem } from 'components';
+import { ColorfulHeader, Hi, PostItem } from 'components';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
 
@@ -40,7 +40,7 @@ const Home: NextPage<Props> = ({ posts }) => {
   const sortedPosts = Posts.sort(
     (a: { date: string }, b: { date: string }) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  ).slice(0, 3);
 
   return (
     <>
@@ -52,16 +52,6 @@ const Home: NextPage<Props> = ({ posts }) => {
         </Head>
 
         <Hi />
-
-        <Box>
-          <ColorfulHeader header="About Me" emoji="💻" />
-          <Card data="about" />
-        </Box>
-
-        {/* <Box>
-          <ColorfulHeader header="Experience" emoji="🤵" />
-          <Card data="experience" />
-        </Box> */}
 
         <Box>
           <ColorfulHeader header="Latest Posts" emoji="📚" />
@@ -82,7 +72,7 @@ const Home: NextPage<Props> = ({ posts }) => {
 export default Home;
 
 export const getStaticProps = () => {
-  const posts = getPosts(3);
+  const posts = getPosts(false);
 
   return {
     props: {

@@ -1,10 +1,41 @@
 import React from 'react';
-import { Box, ColorfulHeader } from 'components';
+import getPosts from 'scripts/fileSystem';
+import { Box, ColorfulHeader, PostItem } from 'components';
 import { Icon } from '@iconify/react';
 import { styled } from 'stitches.config';
+import { CardsGrid } from '../components/Card/Card.styled';
+import { ToolsData, Categories } from '../components/Tools/ToolsData';
 // import Image from 'next/image';
 
-type Props = {};
+type Props = {
+  posts: [
+    post: {
+      slug: string;
+      data: {
+        date: string;
+        title: string;
+        excerpt: string;
+        img: string;
+        tag: string;
+      };
+    }
+  ];
+};
+
+type Tool = {
+  title: string;
+  list: {
+    name: string;
+    icon: string;
+    link: string;
+    category: string;
+  };
+};
+
+const ToolsSection = styled('section', {
+  display: 'grid',
+  gridGap: '$7',
+});
 
 const Lists = styled('div', {
   display: 'grid',
@@ -36,83 +67,64 @@ const Link = styled('a', {
 //   height: '25px',
 // });
 
-const Tools = (props: Props) => {
+const Tools = ({ posts }: Props) => {
+  const Title = ToolsData.filter((item: any) =>
+    item.title === Categories.map((i) => i) ? item.title : null
+  );
+
+  console.log(Title);
+
   return (
     <>
-      {/* <ColorfulHeader
-        header="Tools"
-        emoji="📐📏"
-        css={{ letterSpacing: '-25px' }}
-      /> */}
-      <ColorfulHeader header="My Tools" emoji="📐" />
-
-      <Lists>
+      <ToolsSection aria-labelledby="tools">
         <Box>
-          <ListHeader>Browsing</ListHeader>
-          <List css={{ mt: '$2' }}>
-            <ListItem>
-              <Icon icon="simple-icons:firefox" color="var(--colors-red9)" />
-              <Link href="#">Firefox</Link>
-            </ListItem>
-            <ListItem>
-              <Icon
-                icon="simple-icons:googlechrome"
-                color="var(--colors-red9)"
-              />
-              <Link href="#">Google Chrome</Link>
-            </ListItem>
-            <ListItem>
-              <Icon
-                icon="simple-icons:ublockorigin"
-                color="var(--colors-red9)"
-              />
-              <Link href="#">Ublock origin</Link>
-            </ListItem>
-            <ListItem>
-              <Icon icon="simple-icons:bitwarden" color="var(--colors-red9)" />
-              <Link href="#">Bitwarden</Link>
-            </ListItem>
-            <ListItem>
-              <Icon icon="simple-icons:darkreader" color="var(--colors-red9)" />
-              <Link href="#">Dark Reader</Link>
-            </ListItem>
-            <ListItem>
-              <Icon
-                icon="fluent:cookies-20-filled"
-                color="var(--colors-red9)"
-              />
-              <Link href="#">I don&#39;t care cookies</Link>
-            </ListItem>
-          </List>
+          <ColorfulHeader header="Tools" emoji="📐" />
+
+          <CardsGrid>
+            {posts.map(
+              (post) =>
+                post.data.tag === 'tools' && (
+                  <PostItem key={post.slug} post={post} />
+                )
+            )}
+          </CardsGrid>
         </Box>
 
         <Box>
-          <ListHeader>Development </ListHeader>
-          <List css={{ mt: '$2' }}>
-            <ListItem>
-              <Icon
-                icon="simple-icons:visualstudiocode"
-                color="var(--colors-cyan9)"
-              />
-              <Link href="#">Vscode</Link>
-            </ListItem>
-            <ListItem>
-              <Icon icon="clarity:plugin-solid" color="var(--colors-cyan9)" />
-              <Link href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark">
-                Atom one Dark Theme
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Icon icon="clarity:plugin-solid" color="var(--colors-cyan9)" />
-              <Link href="https://marketplace.visualstudio.com/items?itemName=wart.ariake-dark">
-                Ariake Dark
-              </Link>
-            </ListItem>
-          </List>
+          <ColorfulHeader header="My Tools" emoji="📐" />
+          <Lists>
+            <Box>
+              {ToolsData.map((item: any, index: number) => (
+                <Box key={index}>
+                  <ListHeader>{Title}</ListHeader>
+                  {item.list.map((tool: any) => (
+                    <>
+                      <List css={{ mt: '$2' }} key={tool.name}>
+                        <ListItem>
+                          <Icon icon={tool.icon} color="var(--colors-red9)" />
+                          <Link href={tool.link}>{tool.name}</Link>
+                        </ListItem>
+                      </List>
+                    </>
+                  ))}
+                </Box>
+              ))}
+            </Box>
+          </Lists>
         </Box>
-      </Lists>
+      </ToolsSection>
     </>
   );
 };
 
 export default Tools;
+
+export const getStaticProps = () => {
+  const posts = getPosts(false);
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};

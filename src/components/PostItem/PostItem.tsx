@@ -10,6 +10,7 @@ type Props = {
       title: string;
       excerpt: string;
       img: string;
+      tag: string;
     };
   };
 };

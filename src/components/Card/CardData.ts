@@ -19,26 +19,3 @@ export const experience = [
     info: 'Developing and maintaining the front-end functionality of websites, participating in discussions with clients to clarify what they want, developing websites that have a consistent feel and look throughout all web properties, providing technical support to end users.',
   },
 ];
-
-export const contact = [
-  {
-    text: 'Email/beshoi16@gmail.com',
-    icon: 'fontisto:email',
-    link: 'mailto:beshoiemad16@gmail.com',
-  },
-  {
-    text: 'Github/beshoi',
-    icon: 'simple-icons:github',
-    link: '//github.com/Beshoi',
-  },
-  {
-    text: 'Linkedin/beshoi-emad',
-    icon: 'simple-icons:linkedin',
-    link: '//linkedin.com/in/beshoi-emad',
-  },
-  {
-    text: 'Twitter/beshoi-emad',
-    icon: 'simple-icons:twitter',
-    link: '//twitter.com/beshoi_emad',
-  },
-];

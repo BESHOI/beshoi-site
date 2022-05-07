@@ -3,9 +3,15 @@ import Image from 'next/image';
 import { navItems } from './NavItems';
 import { NavLink } from './NavLink';
 import { styled } from 'stitches.config';
-import { Flex } from 'components';
 
 type Props = {};
+
+const Nav = styled('nav', {
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+});
 
 const NavList = styled('ul', {
   p: '$0',
@@ -13,6 +19,7 @@ const NavList = styled('ul', {
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'center',
+  gap: '$5',
 });
 
 const NavItem = styled('li', {
@@ -22,43 +29,35 @@ const NavItem = styled('li', {
   },
 });
 
-const NavImage = styled('div', {
-  // position: 'relative',
-  // width: '50px',
-  // height: '50px',
+const HeaderImg = styled(Image, {
+  borderRadius: '$4',
 });
 
 export const Header = (props: Props) => {
   return (
     <header>
-      <nav>
+      <Nav>
+        <NavLink exact href="/">
+          <HeaderImg
+            src="/img/Beshoi.jpg"
+            alt="profile-picture"
+            layout="fixed"
+            width="50px"
+            height="50px"
+            priority
+          />
+        </NavLink>
+
         <NavList>
-          <NavItem>
-            <NavLink exact href="/">
-              <>
-                <Image
-                  src="/img/Beshoi.jpg"
-                  alt="profile-picture"
-                  // layout="fill"
-                  layout="fixed"
-                  width="50px"
-                  height="50px"
-                  priority
-                />
-              </>
-            </NavLink>
-          </NavItem>
-          <Flex css={{ flexWrap: 'wrap', gap: '$5', ml: '$auto' }}>
-            {navItems.map((item) => (
-              <NavItem key={item.name}>
-                <NavLink exact href={item.link}>
-                  {item.name}
-                </NavLink>
-              </NavItem>
-            ))}
-          </Flex>
+          {navItems.map((item) => (
+            <NavItem key={item.name}>
+              <NavLink exact href={item.link}>
+                {item.name}
+              </NavLink>
+            </NavItem>
+          ))}
         </NavList>
-      </nav>
+      </Nav>
     </header>
   );
 };

@@ -1,11 +1,10 @@
 import React from 'react';
 import getPosts from 'scripts/fileSystem';
 import { Box, ColorfulHeader, PostItem } from 'components';
-import { Icon } from '@iconify/react';
+import { Icon, IconifyIcon } from '@iconify/react';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
-import { ToolsData, Categories } from '../components/Tools/ToolsData';
-// import Image from 'next/image';
+import { ToolsData } from '../components/Tools/ToolsData';
 
 type Props = {
   posts: [
@@ -22,16 +21,6 @@ type Props = {
   ];
 };
 
-type Tool = {
-  title: string;
-  list: {
-    name: string;
-    icon: string;
-    link: string;
-    category: string;
-  };
-};
-
 const ToolsSection = styled('section', {
   display: 'grid',
   gridGap: '$7',
@@ -45,6 +34,9 @@ const Lists = styled('div', {
 
 const List = styled('ul', {
   listStyle: 'none',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit,minmax(200px,400px))',
+  gap: '$1',
 });
 
 const ListHeader = styled('h3', { m: '$0' });
@@ -61,59 +53,42 @@ const Link = styled('a', {
   textDecoration: 'underline',
 });
 
-// const ImageContainer = styled('div', {
-//   position: 'relative',
-//   width: '25px',
-//   height: '25px',
-// });
-
 const Tools = ({ posts }: Props) => {
-  const Title = ToolsData.filter((item: any) =>
-    item.title === Categories.map((i) => i) ? item.title : null
-  );
-
-  console.log(Title);
-
   return (
-    <>
-      <ToolsSection aria-labelledby="tools">
-        <Box>
-          <ColorfulHeader header="Tools" emoji="📐" />
+    <ToolsSection aria-labelledby="tools">
+      <Box>
+        <ColorfulHeader header="Tools" emoji="⛏" />
+        <CardsGrid>
+          {posts.map(
+            (post) =>
+              post.data.tag === 'tools' && (
+                <PostItem key={post.slug} post={post} />
+              )
+          )}
+        </CardsGrid>
+      </Box>
 
-          <CardsGrid>
-            {posts.map(
-              (post) =>
-                post.data.tag === 'tools' && (
-                  <PostItem key={post.slug} post={post} />
-                )
-            )}
-          </CardsGrid>
-        </Box>
-
-        <Box>
-          <ColorfulHeader header="My Tools" emoji="📐" />
-          <Lists>
-            <Box>
-              {ToolsData.map((item: any, index: number) => (
-                <Box key={index}>
-                  <ListHeader>{Title}</ListHeader>
-                  {item.list.map((tool: any) => (
-                    <>
-                      <List css={{ mt: '$2' }} key={tool.name}>
-                        <ListItem>
-                          <Icon icon={tool.icon} color="var(--colors-red9)" />
-                          <Link href={tool.link}>{tool.name}</Link>
-                        </ListItem>
-                      </List>
-                    </>
-                  ))}
-                </Box>
-              ))}
+      <Box>
+        <ColorfulHeader header="My Tools" emoji="📐" />
+        <Lists>
+          {ToolsData.map((item, index: number) => (
+            <Box key={index}>
+              <ListHeader>{item.title}</ListHeader>
+              <List css={{ mt: '$2' }}>
+                {item.list.map(
+                  (tool: { name: string; icon: string; link: string }) => (
+                    <ListItem key={tool.name}>
+                      <Icon icon={tool.icon} color={item.color} />
+                      <Link href={tool.link}>{tool.name}</Link>
+                    </ListItem>
+                  )
+                )}
+              </List>
             </Box>
-          </Lists>
-        </Box>
-      </ToolsSection>
-    </>
+          ))}
+        </Lists>
+      </Box>
+    </ToolsSection>
   );
 };
 

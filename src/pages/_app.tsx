@@ -7,20 +7,18 @@ import { Layout } from '../components';
 function MyApp({ Component, pageProps }: AppProps) {
   globalStyles();
   return (
-    <>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        value={{
-          dark: darkTheme.className,
-          light: 'light',
-        }}
-      >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      value={{
+        dark: darkTheme.className,
+        light: 'light',
+      }}
+    >
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 

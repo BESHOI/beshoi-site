@@ -5,22 +5,20 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <>
-      <Grid css={{ mt: '$4', gap: '$7' }}>
-        <Box>
-          <ColorfulHeader header="About Me" emoji="💻" />
-          <Card data="about" />
-        </Box>
+    <Grid css={{ mt: '$4', gap: '$7' }}>
+      <Box>
+        <ColorfulHeader header="About Me" emoji="💻" />
+        <Card data="about" />
+      </Box>
 
-        <Box>
-          <ColorfulHeader header="Experience" emoji="🤵" />
-          <Card data="experience" />
-        </Box>
+      <Box>
+        <ColorfulHeader header="Experience" emoji="🤵" />
+        <Card data="experience" />
+      </Box>
 
-        {/* <ColorfulHeader header="Reach Me" emoji="✨" /> */}
-        {/* <Card data="contact" /> */}
-      </Grid>
-    </>
+      {/* <ColorfulHeader header="Reach Me" emoji="✨" /> */}
+      {/* <Card data="contact" /> */}
+    </Grid>
   );
 };
 

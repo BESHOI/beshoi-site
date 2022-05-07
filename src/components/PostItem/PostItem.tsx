@@ -20,7 +20,6 @@ export const PostItem = ({ post }: Props) => {
   const { date, title, excerpt, img } = post.data;
 
   return (
-    <>
       <s.Card key={post.slug}>
         <s.CardText>
           <s.CardSmall>{date}</s.CardSmall>
@@ -41,6 +40,5 @@ export const PostItem = ({ post }: Props) => {
           </Link>
         </s.CardImageContainer> */}
       </s.Card>
-    </>
   );
 };

@@ -1,5 +1,5 @@
-import { styled } from 'stitches.config';
 import Image from 'next/image';
+import { styled } from 'stitches.config';
 import { Icon } from '@iconify/react';
 
 export const CardsGrid = styled('div', {

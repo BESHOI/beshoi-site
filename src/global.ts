@@ -1,26 +1,27 @@
 import '../node_modules/modern-normalize/modern-normalize.css';
-import { globalCss } from './stitches.config';
+import { globalCss, darkTheme } from './stitches.config';
 
 export const globalStyles = globalCss({
-  '@font-face': {
-    fontFamily: 'InterVariable',
-    fontStyle: 'normal',
-    fontDisplay: 'optional',
-    fontWeight: '100 900',
-    src: `url('/font/inter-latin-variable-wghtOnly-normal.woff2') format('woff2') `,
-    unicodeRange:
-      'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
-  },
+  '@font-face': [
+    {
+      fontFamily: 'InterVariable',
+      fontStyle: 'normal',
+      fontDisplay: 'swap',
+      fontWeight: '100 900',
+      src: `url('/font/inter-latin-variable-wghtOnly-normal.woff2') format('woff2') `,
+      unicodeRange:
+        'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
+    },
+  ],
 
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
-    display: 'block',
     height: '100%',
+    scrollBehavior: 'smooth',
   },
 
   body: {
-    minBlockSize: '100%',
     minHeight: ' 100%',
     fontFamily: `'InterVariable',
     system-ui,
@@ -35,7 +36,6 @@ export const globalStyles = globalCss({
     textRendering: 'optimizeSpeed',
     fontWeight: '$2',
     lineHeight: '$3',
-    scrollBehavior: 'smooth',
     backgroundColor: '$background',
     color: '$text',
   },
@@ -89,7 +89,6 @@ export const globalStyles = globalCss({
   },
 
   '.container': {
-    // width: 'min(100% - 2rem, 56.25rem)',
     maxWidth: '56.25rem',
     p: '$4',
     mi: '$auto',
@@ -97,10 +96,6 @@ export const globalStyles = globalCss({
     display: 'grid',
     gridTemplate: `70px 1fr auto / 1fr`,
     gap: '$6',
-  },
-
-  main: {
-    width: '100%',
   },
 
   '.active': {
@@ -113,11 +108,39 @@ export const globalStyles = globalCss({
   },
 
   '*,*::before,*::after': {
-    '@motion': {
+    '@reduce': {
       animationDuration: '1ms !important',
       animationIterationCount: '1 !important',
       transitionDuration: '1ms !important',
       scrollBehavior: 'auto !important',
+    },
+  },
+
+  '@motion': {
+    ':focus': {
+      transition: 'outline-offset .25s ease',
+    },
+    ':focus:not(:active)': {
+      outline: '1px solid $amber9',
+      outlineOffset: '5px',
+    },
+  },
+
+  '@dark': {
+    ':root:not(.light)': {
+      ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
+        const currentColor =
+          darkTheme.colors[currentColorKey as keyof typeof darkTheme.colors];
+        const currentColorValue =
+          currentColor.value.substring(0, 1) === '$'
+            ? `$colors${currentColor.value}`
+            : currentColor.value;
+
+        return {
+          [currentColor.variable]: currentColorValue,
+          ...varSet,
+        };
+      }, {}),
     },
   },
 });

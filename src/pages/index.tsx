@@ -37,35 +37,56 @@ const Home: NextPage<Props> = ({ posts }) => {
     return { ...obj, date: new Date(obj.data.date) };
   });
 
-  const sortedPosts = Posts.sort(
+  const LatestPosts = Posts.sort(
     (a: { date: string }, b: { date: string }) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
-  ).slice(0, 3);
+  )
+    .filter((post) => post.data.tag !== 'tools')
+    .slice(0, 3);
+
+  const LatestTools = Posts.sort(
+    (a: { date: string }, b: { date: string }) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+    .filter((post) => post.data.tag === 'tools')
+    .slice(0, 3);
 
   return (
-    <>
-      <HomeSection aria-labelledby="home">
-        <Head>
-          <title>Beshoi &#39;s Site</title>
-          <meta name="description" content="My personal site" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+    <HomeSection aria-labelledby="home">
+      <Head>
+        <title>Beshoi &#39;s Site</title>
+        <meta name="description" content="My personal site" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <Hi />
+      <Hi />
 
-        <Box>
-          <ColorfulHeader header="Latest Posts" emoji="📚" />
-          <CardsGrid>
-            {sortedPosts.map((post) => (
-              <PostItem key={post.slug} post={post} />
-            ))}
-          </CardsGrid>
-          <SeeMore>
-            <Link href="/blog">See More Posts &#8599;</Link>
-          </SeeMore>
-        </Box>
-      </HomeSection>
-    </>
+      <Box>
+        <ColorfulHeader header="Latest Posts" emoji="📚" />
+        <CardsGrid>
+          {LatestPosts.map((post) => (
+            <PostItem key={post.slug} post={post} />
+          ))}
+        </CardsGrid>
+
+        <SeeMore>
+          <Link href="/blog">See More Posts &#8599;</Link>
+        </SeeMore>
+      </Box>
+
+      <Box>
+        <ColorfulHeader header="LatestTools" emoji="⛏" />
+        <CardsGrid>
+          {LatestTools.map((post) => (
+            <PostItem key={post.slug} post={post} />
+          ))}
+        </CardsGrid>
+
+        <SeeMore>
+          <Link href="/tools">See More Posts &#8599;</Link>
+        </SeeMore>
+      </Box>
+    </HomeSection>
   );
 };
 

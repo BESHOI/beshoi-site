@@ -7,22 +7,34 @@ type Props = {
   posts: [];
 };
 
+type post = {
+  date: Date;
+  slug: string;
+  data: {
+    date: string;
+    tag: string;
+    title: string;
+    excerpt: string;
+    img: string;
+  };
+};
+
 const Blog = ({ posts }: Props) => {
-  const Posts = posts.slice().map((obj: any) => {
+  const Posts = posts.slice().map((obj: post) => {
     return { ...obj, date: new Date(obj.data.date) };
   });
 
   const sortedPosts = Posts.sort(
-    (a: { date: string }, b: { date: string }) =>
+    (a: { date: Date }, b: { date: Date }) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  ).filter((post) => post.data.tag !== 'tools');
 
   return (
     <>
       <Meta title="Blog" />
       <ColorfulHeader header="All Posts" emoji="📚" />
       <CardsGrid>
-        {sortedPosts.map((post) => (
+        {sortedPosts.map((post: post) => (
           <PostItem key={post.slug} post={post} />
         ))}
       </CardsGrid>

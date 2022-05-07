@@ -20,7 +20,7 @@ const Header = styled('h2', {
   '&:hover': {
     '@hover': {
       backgroundSize: '400%',
-      animation: `${GradientAnimation} 2s linear infinite alternate`,
+      animation: `${GradientAnimation} 1s linear infinite alternate`,
     },
   },
 });

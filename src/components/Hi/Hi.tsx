@@ -1,5 +1,5 @@
 import { keyframes, styled } from 'stitches.config';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Box } from '../Utils/Utils';
 import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
 

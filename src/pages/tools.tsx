@@ -1,7 +1,7 @@
 import React from 'react';
 import getPosts from 'scripts/fileSystem';
 import { Box, ColorfulHeader, PostItem } from 'components';
-import { Icon, IconifyIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
 import { ToolsData } from '../components/Tools/ToolsData';

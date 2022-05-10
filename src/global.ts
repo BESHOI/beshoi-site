@@ -17,7 +17,7 @@ export const globalStyles = globalCss({
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
-    height: '100%',
+    minHeight: '100%',
     scrollBehavior: 'smooth',
   },
 

@@ -3,13 +3,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import getPosts from '../scripts/fileSystem';
 import generateRSSFeed from '../scripts/rss';
+import { SortedPosts } from './blog';
 import { ColorfulHeader, Hi, PostItem } from 'components';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
-
-type Props = {
-  posts: [];
-};
 
 const HomeSection = styled('section', {
   display: 'grid',
@@ -31,17 +28,7 @@ const SeeMore = styled('p', {
   },
 });
 
-const Home: NextPage<Props> = ({ posts }) => {
-  const SortedPosts = posts
-    .slice()
-    .map((obj: any) => {
-      return { ...obj, date: new Date(obj.data.date) };
-    })
-    .sort(
-      (a: { date: string }, b: { date: string }) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-
+const Home: NextPage<SortedPosts> = ({ SortedPosts }) => {
   const LatestPosts = SortedPosts.filter(
     (post) => post.data.tag !== 'tools'
   ).slice(0, 3);
@@ -92,21 +79,16 @@ const Home: NextPage<Props> = ({ posts }) => {
 export default Home;
 
 export const getStaticProps = () => {
-  const posts = getPosts(false);
-  const SortedPosts = posts
-    .slice()
-    .map((obj: any) => {
-      return { ...obj, date: new Date(obj.data.date) };
-    })
-    .sort(
-      (a: { date: string }, b: { date: string }) =>
-        new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
+  const posts = getPosts();
+
+  const SortedPosts = posts.sort((a: any, b: any) =>
+    new Date(a.data.date) < new Date(b.data.date) ? 1 : -1
+  );
 
   generateRSSFeed(SortedPosts);
   return {
     props: {
-      posts,
+      SortedPosts,
     },
   };
 };

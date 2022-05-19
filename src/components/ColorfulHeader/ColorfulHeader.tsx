@@ -18,10 +18,8 @@ const Header = styled('h2', {
   color: 'transparent',
   backgroundClip: 'text',
   '&:hover': {
-    '@hover': {
-      backgroundSize: '400%',
-      animation: `${GradientAnimation} 1s linear infinite alternate`,
-    },
+    backgroundSize: '400%',
+    animation: `${GradientAnimation} 1s linear infinite alternate`,
   },
 });
 

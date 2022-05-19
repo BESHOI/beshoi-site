@@ -15,9 +15,6 @@ const About = (props: Props) => {
         <ColorfulHeader header="Experience" emoji="🤵" />
         <Card data="experience" />
       </Box>
-
-      {/* <ColorfulHeader header="Reach Me" emoji="✨" /> */}
-      {/* <Card data="contact" /> */}
     </Grid>
   );
 };

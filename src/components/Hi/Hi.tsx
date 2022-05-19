@@ -16,14 +16,14 @@ const HiSection = styled('div', {
   },
 
   '& h2': {
-    backgroundImage: 'linear-gradient(45deg,$crimson9,$blue9)',
+    backgroundImage: 'linear-gradient(-45deg,$crimson9,$blue9)',
     color: 'transparent',
     backgroundClip: 'text',
     '&:hover': {
-      '@hover': {
-        backgroundSize: '400%',
-        animation: `${GradientAnimation} 2s linear infinite alternate`,
-      },
+      backgroundImage:
+        'linear-gradient(-45deg,$crimson9,$blue9,$green9,$blue9)',
+      backgroundSize: '400%',
+      animation: `${GradientAnimation} 2s linear infinite alternate`,
     },
   },
 });

@@ -6,5 +6,7 @@ export { Hi } from './Hi/Hi';
 export { Card } from './Card/Card';
 export { ColorfulHeader } from './ColorfulHeader/ColorfulHeader';
 export { ColorfulSpan } from './ColorfulSpan/ColorfulSpan';
+export { Stitches, NextJs, Vercel } from './Icons/Icones';
+export { NotFound } from './NotFound/NotFound';
 export { Box, Flex, Grid, Text } from './Utils/Utils';
 export { Layout } from './Layout/Layout';

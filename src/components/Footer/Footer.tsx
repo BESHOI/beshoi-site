@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'stitches.config';
-import { Icon } from '@iconify/react';
+import { Stitches, NextJs, Vercel } from 'components';
 
 type Props = {};
 
@@ -36,9 +36,8 @@ export const Footer = (props: Props) => {
       </FooterReachMe>
 
       <FooterMadeWith>
-        Made with <Icon icon="simple-icons:nextdotjs" />&
-        <Icon icon="radix-icons:stitches-logo" /> hosted on
-        <Icon icon="simple-icons:vercel" />
+        Made with <NextJs />&
+        <Stitches /> hosted on <Vercel />
       </FooterMadeWith>
     </FooterSection>
   );

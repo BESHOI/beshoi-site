@@ -1,25 +1,11 @@
 import React from 'react';
 import getPosts from 'scripts/fileSystem';
 import { Box, ColorfulHeader, PostItem } from 'components';
-import { Icon } from '@iconify/react';
+import { BiLink } from 'react-icons/bi';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
 import { ToolsData } from '../components/Tools/ToolsData';
-
-type Props = {
-  posts: [
-    post: {
-      slug: string;
-      data: {
-        date: string;
-        title: string;
-        excerpt: string;
-        img: string;
-        tag: string;
-      };
-    }
-  ];
-};
+import { SortedPosts } from './blog';
 
 const ToolsSection = styled('section', {
   display: 'grid',
@@ -36,7 +22,7 @@ const List = styled('ul', {
   listStyle: 'none',
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit,minmax(200px,400px))',
-  gap: '$1',
+  gap: '$2',
 });
 
 const ListHeader = styled('h3', { m: '$0' });
@@ -53,13 +39,13 @@ const Link = styled('a', {
   textDecoration: 'underline',
 });
 
-const Tools = ({ posts }: Props) => {
+const Tools = ({ SortedPosts }: SortedPosts) => {
   return (
     <ToolsSection aria-labelledby="tools">
       <Box>
         <ColorfulHeader header="Tools" emoji="⛏" />
         <CardsGrid>
-          {posts.map(
+          {SortedPosts.map(
             (post) =>
               post.data.tag === 'tools' && (
                 <PostItem key={post.slug} post={post} />
@@ -75,14 +61,12 @@ const Tools = ({ posts }: Props) => {
             <Box key={index}>
               <ListHeader>{item.title}</ListHeader>
               <List css={{ mt: '$2' }}>
-                {item.list.map(
-                  (tool: { name: string; icon: string; link: string }) => (
-                    <ListItem key={tool.name}>
-                      <Icon icon={tool.icon} color={item.color} />
-                      <Link href={tool.link}>{tool.name}</Link>
-                    </ListItem>
-                  )
-                )}
+                {item.list.map((tool: { name: string; link: string }) => (
+                  <ListItem key={tool.name}>
+                    <BiLink color="var(--colors-crimson9)" />
+                    <Link href={tool.link}>{tool.name}</Link>
+                  </ListItem>
+                ))}
               </List>
             </Box>
           ))}
@@ -95,11 +79,15 @@ const Tools = ({ posts }: Props) => {
 export default Tools;
 
 export const getStaticProps = () => {
-  const posts = getPosts(false);
+  const posts = getPosts();
+
+  const SortedPosts = posts.sort((a: any, b: any) =>
+    new Date(a.data.date) < new Date(b.data.date) ? 1 : -1
+  );
 
   return {
     props: {
-      posts,
+      SortedPosts,
     },
   };
 };

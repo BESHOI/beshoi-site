@@ -14,7 +14,9 @@ export const Card = ({ data }: Props) => {
         <s.CardsGrid>
           {about.map((item, index) => (
             <s.CardSection key={index}>
-              <s.CardParagraph>{item.about}</s.CardParagraph>
+              <s.CardParagraph css={{ lineHeight: '$4' }}>
+                {item.about}
+              </s.CardParagraph>
             </s.CardSection>
           ))}
         </s.CardsGrid>
@@ -29,7 +31,9 @@ export const Card = ({ data }: Props) => {
                 <s.CardSmall>/ {item.company}</s.CardSmall>
               </Flex>
               <s.CardHeader>{item.header}</s.CardHeader>
-              <s.CardParagraph>{item.info}</s.CardParagraph>
+              <s.CardParagraph >
+                {item.info}
+              </s.CardParagraph>
             </s.CardSection>
           ))}
         </s.CardsGrid>

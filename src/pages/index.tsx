@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import getPosts from '../scripts/fileSystem';
+import generateRSSFeed from '../scripts/rss';
 import { ColorfulHeader, Hi, PostItem } from 'components';
 import { styled } from 'stitches.config';
 import { CardsGrid } from '../components/Card/Card.styled';
@@ -26,30 +27,28 @@ const SeeMore = styled('p', {
   ml: '$2',
   fontWeight: '$3',
   '&:hover': {
-    '@hover': {
-      textDecoration: 'underline',
-    },
+    textDecoration: 'underline',
   },
 });
 
 const Home: NextPage<Props> = ({ posts }) => {
-  const Posts = posts.slice().map((obj: any) => {
-    return { ...obj, date: new Date(obj.data.date) };
-  });
+  const SortedPosts = posts
+    .slice()
+    .map((obj: any) => {
+      return { ...obj, date: new Date(obj.data.date) };
+    })
+    .sort(
+      (a: { date: string }, b: { date: string }) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
 
-  const LatestPosts = Posts.sort(
-    (a: { date: string }, b: { date: string }) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
-    .filter((post) => post.data.tag !== 'tools')
-    .slice(0, 3);
+  const LatestPosts = SortedPosts.filter(
+    (post) => post.data.tag !== 'tools'
+  ).slice(0, 3);
 
-  const LatestTools = Posts.sort(
-    (a: { date: string }, b: { date: string }) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
-    .filter((post) => post.data.tag === 'tools')
-    .slice(0, 3);
+  const LatestTools = SortedPosts.filter(
+    (post) => post.data.tag === 'tools'
+  ).slice(0, 3);
 
   return (
     <HomeSection aria-labelledby="home">
@@ -94,7 +93,17 @@ export default Home;
 
 export const getStaticProps = () => {
   const posts = getPosts(false);
+  const SortedPosts = posts
+    .slice()
+    .map((obj: any) => {
+      return { ...obj, date: new Date(obj.data.date) };
+    })
+    .sort(
+      (a: { date: string }, b: { date: string }) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
 
+  generateRSSFeed(SortedPosts);
   return {
     props: {
       posts,

@@ -36,6 +36,34 @@ import { Meta, ColorfulSpan } from 'components';
   has an extensive community
 </p>
 
+```html
+<div class="card">
+  <p class="card-paragraph">Card Paragraph</p>
+</div>
+```
+
+```css
+.card {
+  display: grid;
+}
+.card .card-paragraph {
+  font-size: 1rem;
+}
+```
+
+```css
+.card {
+  display: grid;
+  & .card-paragraph {
+    font-size: 1rem;
+  }
+}
+```
+
+```js
+const Card = document.querySelector('.card');
+```
+
 ### Benefits of using React Navigation
 
 1. It is cool to use

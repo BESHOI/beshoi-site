@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import remarkFrontmatter from 'remark-frontmatter';
+import remarkPrism from 'remark-prism';
 
 const nextConfig = {
   webpack: (config, options) => {
@@ -11,7 +12,7 @@ const nextConfig = {
           loader: '@mdx-js/loader',
           options: {
             providerImportSource: '@mdx-js/react',
-            remarkPlugins: [remarkFrontmatter],
+            remarkPlugins: [remarkPrism, remarkFrontmatter],
           },
         },
       ],

@@ -3,38 +3,31 @@ import getPosts from '../scripts/fileSystem';
 import { PostItem, Meta, ColorfulHeader } from 'components';
 import { CardsGrid } from '../components/Card/Card.styled';
 
-type Props = {
-  posts: [];
+export type SortedPosts = {
+  SortedPosts: [
+    post: {
+      date: Date;
+      slug: string;
+      data: {
+        date: string;
+        tag: string;
+        title: string;
+        excerpt: string;
+        img: string;
+      };
+    }
+  ];
 };
 
-type post = {
-  date: Date;
-  slug: string;
-  data: {
-    date: string;
-    tag: string;
-    title: string;
-    excerpt: string;
-    img: string;
-  };
-};
-
-const Blog = ({ posts }: Props) => {
-  const Posts = posts.slice().map((obj: post) => {
-    return { ...obj, date: new Date(obj.data.date) };
-  });
-
-  const sortedPosts = Posts.sort(
-    (a: { date: Date }, b: { date: Date }) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-  ).filter((post) => post.data.tag !== 'tools');
+const Blog = ({ SortedPosts }: SortedPosts) => {
+  const BlogPosts = SortedPosts.filter((post) => post.data.tag !== 'tools');
 
   return (
     <>
       <Meta title="Blog" />
       <ColorfulHeader header="All Posts" emoji="📚" />
       <CardsGrid>
-        {sortedPosts.map((post: post) => (
+        {BlogPosts.map((post) => (
           <PostItem key={post.slug} post={post} />
         ))}
       </CardsGrid>
@@ -45,11 +38,15 @@ const Blog = ({ posts }: Props) => {
 export default Blog;
 
 export const getStaticProps = () => {
-  const posts = getPosts(false);
+  const posts = getPosts();
+
+  const SortedPosts = posts.sort((a: any, b: any) =>
+    new Date(a.data.date) < new Date(b.data.date) ? 1 : -1
+  );
 
   return {
     props: {
-      posts,
+      SortedPosts,
     },
   };
 };

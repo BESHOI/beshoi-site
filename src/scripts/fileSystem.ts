@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const getPosts = (limit: number | boolean) => {
+const getPosts = () => {
   const dirFiles = fs.readdirSync(path.join(process.cwd(), 'src', 'pages', 'blog', 'posts'), {
     withFileTypes: true,
   });
@@ -24,11 +24,11 @@ const getPosts = (limit: number | boolean) => {
     .filter((post) => post);
 
 
-  if (limit) {
-    return posts.filter((post, index) => {
-      return index + 1 <= limit;
-    });
-  }
+  // if (limit) {
+  //   return posts.filter((post, index) => {
+  //     return index + 1 <= limit;
+  //   });
+  // }
 
   return posts;
 };

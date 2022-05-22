@@ -2,7 +2,8 @@ import fs from 'fs';
 import { Feed } from 'feed';
 
 const generateRSSFeed = (posts) => {
-  const baseUrl = 'https://beshoi.dev';
+  const blogUrl = 'https://beshoi.dev/blog';
+  const toolsUrl = 'https://beshoi.dev/tools';
   const author = {
     name: 'Beshoi Emad',
     email: 'beshoiemad16@gmail.com',
@@ -16,7 +17,7 @@ const generateRSSFeed = (posts) => {
     id: 'http://beshoi.dev',
     link: 'http://beshoi.dev',
     language: 'en',
-    image: 'http://beshoi.dev/img/Beshoi.png',
+    image: 'http://beshoi.dev/img/Beshoi.jpg',
     // favicon: 'http://beshoi.dev/favicon.ico',
     copyright: `All rights reserved 2022, Beshoi Emad`,
     updated: new Date(),
@@ -35,18 +36,18 @@ const generateRSSFeed = (posts) => {
   // Add each article to the feed
   posts.forEach((post) => {
     const {
-      content,
+      // content,
       slug,
-      data: { date, description, title },
+      data: { date, excerpt, title, tag },
     } = post;
-    const url = `${baseUrl}/${slug}`;
+    const url = tag === 'tools' ? `${toolsUrl}/${slug}` : `${blogUrl}/${slug}`;
 
     feed.addItem({
       title,
       id: url,
       link: url,
-      description,
-      content,
+      description: excerpt,
+      // content,
       author: [author],
       date: new Date(date),
     });

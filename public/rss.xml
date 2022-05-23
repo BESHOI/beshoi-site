@@ -1,259 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0">
     <channel>
         <title>Feed Title</title>
         <link>http://beshoi.dev</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 19 May 2022 10:26:11 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 May 2022 07:18:38 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <language>en</language>
         <image>
             <title>Feed Title</title>
-            <url>http://beshoi.dev/img/Beshoi.png</url>
+            <url>http://beshoi.dev/img/Beshoi.jpg</url>
             <link>http://beshoi.dev</link>
         </image>
         <copyright>All rights reserved 2022, Beshoi Emad</copyright>
         <item>
             <title><![CDATA[Top Tools to increase productivty]]></title>
-            <link>https://beshoi.dev/tools</link>
-            <guid>https://beshoi.dev/tools</guid>
+            <link>https://beshoi.dev/tools/tools</link>
+            <guid>https://beshoi.dev/tools/tools</guid>
             <pubDate>Sat, 30 Apr 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta, ColorfulSpan } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  layout="responsive"
-  alt="post-img"
-  priority
-  placeholder={'blur'}
-  quality={30}
-  blurDataURL
-/>
-
-
-# <ColorfulSpan text="Top tools to increase productivty" color="$red5" />
-
-## <ColorfulSpan text="Top tools to increase productivty" color="$red5" />
-
-### <ColorfulSpan text="Top tools to increase productivty" color="$yellow5" />
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio omnis excepturi
-illum doloribus cum illo impedit qui reiciendis culpa, aliquam fugit maiores sit
-quod ex distinctio non assumenda iure itaque error. Inventore at ratione voluptate
-dolores quo incidunt quaerat laudantium illum officiis quam recusandae cumque velit,
-libero molestias maiores.
-]]></content:encoded>
+            <description><![CDATA[Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[10 Hilarious Cartoons That Depict Real-Life Problems of Programmers]]></title>
-            <link>https://beshoi.dev/hello</link>
-            <guid>https://beshoi.dev/hello</guid>
+            <link>https://beshoi.dev/blog/hello</link>
+            <guid>https://beshoi.dev/blog/hello</guid>
             <pubDate>Sun, 27 Mar 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta, ColorfulSpan } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  layout="responsive"
-  alt="post-img"
-  priority
-  placeholder={'blur'}
-  quality={30}
-  blurDataURL
-/>
-
-# Hi :)
-
-<p>
-  <ColorfulSpan text="Lorem ipsum" color="$crimson5" /> It is simple to learn,
-  It has an extensive community
-</p>
-
-<p>
-  <ColorfulSpan text="Lorem ipsum" color="$green5" /> It is simple to learn, It
-  has an extensive community
-</p>
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more
-]]></content:encoded>
+            <description><![CDATA[Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[Beshoi & Jesus First Website with Typescript]]></title>
-            <link>https://beshoi.dev/hello3</link>
-            <guid>https://beshoi.dev/hello3</guid>
+            <link>https://beshoi.dev/blog/hello3</link>
+            <guid>https://beshoi.dev/blog/hello3</guid>
             <pubDate>Sat, 26 Mar 2022 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  priority
-  quality="30"
-/>
-
-# Hi :)
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more
-]]></content:encoded>
+            <description><![CDATA[Getting Started with Typescript && Mdx]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[10 Hilarious Cartoons That Depict Real-Life Problems of Programmers]]></title>
-            <link>https://beshoi.dev/hello5</link>
-            <guid>https://beshoi.dev/hello5</guid>
+            <link>https://beshoi.dev/blog/hello5</link>
+            <guid>https://beshoi.dev/blog/hello5</guid>
             <pubDate>Mon, 04 Oct 2021 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  priority
-  quality="30"
-/>
-
-# Hi :)
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more]]></content:encoded>
+            <description><![CDATA[Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[10 Hilarious Cartoons That Depict Real-Life Problems of Programmers]]></title>
-            <link>https://beshoi.dev/hello2</link>
-            <guid>https://beshoi.dev/hello2</guid>
+            <link>https://beshoi.dev/blog/hello2</link>
+            <guid>https://beshoi.dev/blog/hello2</guid>
             <pubDate>Fri, 26 Mar 2021 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  priority
-  quality="30"
-/>
-
-# Hi :)
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more
-]]></content:encoded>
+            <description><![CDATA[Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[Beshoi & Jesus First Website with Typescript]]></title>
-            <link>https://beshoi.dev/hello1</link>
-            <guid>https://beshoi.dev/hello1</guid>
+            <link>https://beshoi.dev/blog/hello1</link>
+            <guid>https://beshoi.dev/blog/hello1</guid>
             <pubDate>Fri, 24 Apr 2020 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  priority
-  quality="30"
-/>
-
-# Hi :)
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more
-]]></content:encoded>
+            <description><![CDATA[Getting Started with Typescript && Mdx]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
         <item>
             <title><![CDATA[Beshoi & Jesus First Website with Typescript]]></title>
-            <link>https://beshoi.dev/hello4</link>
-            <guid>https://beshoi.dev/hello4</guid>
+            <link>https://beshoi.dev/blog/hello4</link>
+            <guid>https://beshoi.dev/blog/hello4</guid>
             <pubDate>Tue, 27 Aug 2019 22:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-import Image from 'next/image';
-import { Meta } from 'components';
-
-<Meta />
-
-<Image
-  src="/img/posts/hi/office.jpg"
-  width={900}
-  height={400}
-  objectFit={'cover'}
-  alt="Post Image"
-  priority
-  quality="30"
-/>
-
-# Hi :)
-
-### Benefits of using React Navigation
-
-1. It is cool to use
-2. It is simple to learn
-3. It has an extensive community
-4. And more and more]]></content:encoded>
+            <description><![CDATA[Getting Started with Typescript && Mdx]]></description>
             <author>beshoiemad16@gmail.com (Beshoi Emad)</author>
         </item>
     </channel>

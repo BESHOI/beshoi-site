@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import getPosts from '../scripts/fileSystem';
-import generateRSSFeed from '../scripts/rss';
+import getPosts from 'scripts/fileSystem';
+import generateRSSFeed from 'scripts/rss';
 import { SortedPosts } from './blog';
 import { ColorfulHeader, Hi, PostItem } from 'components';
 import { styled } from 'stitches.config';
-import { CardsGrid } from '../components/Card/Card.styled';
+import { CardsGrid } from 'components/Card/Card.styled';
 
 const HomeSection = styled('section', {
   display: 'grid',

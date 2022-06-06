@@ -3,8 +3,8 @@ import getPosts from 'scripts/fileSystem';
 import { Box, ColorfulHeader, PostItem } from 'components';
 import { BiLink } from 'react-icons/bi';
 import { styled } from 'stitches.config';
-import { CardsGrid } from '../components/Card/Card.styled';
-import { ToolsData } from '../components/Tools/ToolsData';
+import { CardsGrid } from 'components/Card/Card.styled';
+import { ToolsData } from 'components/Tools/ToolsData';
 import { SortedPosts } from './blog';
 
 const ToolsSection = styled('section', {

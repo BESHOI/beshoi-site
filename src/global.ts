@@ -1,5 +1,5 @@
 import '../node_modules/modern-normalize/modern-normalize.css';
-import { globalCss, darkTheme } from './stitches.config';
+import { globalCss, darkTheme } from 'stitches.config';
 
 export const globalStyles = globalCss({
   '@font-face': [

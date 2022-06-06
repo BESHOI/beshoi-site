@@ -1,7 +1,7 @@
 import React from 'react';
-import getPosts from '../scripts/fileSystem';
+import getPosts from 'scripts/fileSystem';
 import { PostItem, Meta, ColorfulHeader } from 'components';
-import { CardsGrid } from '../components/Card/Card.styled';
+import { CardsGrid } from 'components/Card/Card.styled';
 
 export type SortedPosts = {
   SortedPosts: [

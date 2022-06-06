@@ -14,13 +14,20 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "downlevelIteration":true,
+    "downlevelIteration": true,
     "baseUrl": "./src",
     "paths": {
-      "src/*":["./src/*"],
-      "components/*":["./src/components/"],
+      "@src/*": ["./src/*"],
+      "@components": ["./src/components/"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/ThemeToggle.js", "src/scripts/fileSystem.ts", "src/components/Header/NavLink.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/ThemeToggle.js",
+    "src/scripts/fileSystem.ts",
+    "src/components/Header/NavLink.jsx"
+  ],
   "exclude": ["node_modules"]
 }

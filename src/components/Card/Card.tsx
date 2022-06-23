@@ -14,7 +14,7 @@ export const Card = ({ data }: Props) => {
         <s.CardsGrid>
           {about.map((item, index) => (
             <s.CardSection key={index}>
-              <s.CardParagraph css={{ lineHeight: '$4' }}>
+              <s.CardParagraph>
                 {item.about}
               </s.CardParagraph>
             </s.CardSection>

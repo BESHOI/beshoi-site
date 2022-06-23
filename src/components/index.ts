@@ -9,4 +9,5 @@ export { ColorfulSpan } from './ColorfulSpan/ColorfulSpan';
 export { Stitches, NextJs, Vercel } from './Icons/Icones';
 export { NotFound } from './NotFound/NotFound';
 export { Box, Flex, Grid, Text } from './Utils/Utils';
+export { CoverImage, RegularImage } from './Images/Images';
 export { Layout } from './Layout/Layout';

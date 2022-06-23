@@ -50,8 +50,7 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  /* edit size and font */
-  max-width: calc(100vw - 2rem);
+  /* edit font */
   font-size: var(--fontSizes-1);
 }
 

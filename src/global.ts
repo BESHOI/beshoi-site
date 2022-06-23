@@ -17,12 +17,10 @@ export const globalStyles = globalCss({
   // '*,*::before,*::after': { margin: '0', padding: 0 },
 
   html: {
-    minHeight: '100%',
     scrollBehavior: 'smooth',
   },
 
   body: {
-    minHeight: ' 100%',
     fontFamily: `'InterVariable',
     system-ui,
     -apple-system,
@@ -35,7 +33,7 @@ export const globalStyles = globalCss({
     Segoe UI Emoji`,
     textRendering: 'optimizeSpeed',
     fontWeight: '$2',
-    lineHeight: '$3',
+    lineHeight: '$5',
     backgroundColor: '$background',
     color: '$text',
   },
@@ -49,6 +47,7 @@ export const globalStyles = globalCss({
   h1: {
     fontSize: '$5',
     fontWeight: '$7',
+    letterSpacing: '-1px',
   },
   h2: {
     fontSize: '$4',
@@ -70,7 +69,7 @@ export const globalStyles = globalCss({
     fontSize: '$2',
     fontWeight: '$3',
   },
-  p: {
+  'p, li': {
     fontSize: '$2',
   },
 
@@ -81,7 +80,27 @@ export const globalStyles = globalCss({
 
   a: {
     color: 'inherit',
-    textDecoration: 'none',
+  },
+
+  'blockquote, body, dd, dl, figure, h1, h2, h3, h4, p': {
+    margin: 0,
+  },
+
+  'h1 + span': {
+    margin: '$4 $0 $6 !important',
+  },
+
+  '*:not(h1) + span': {
+    margin: '$2 $0 !important',
+  },
+
+  'ol ': {
+    '& li::first-letter': {
+      textTransform: 'capitalize',
+    },
+    '& li + li': {
+      mt: '$1',
+    },
   },
 
   '#__next': {
@@ -94,8 +113,8 @@ export const globalStyles = globalCss({
     mi: '$auto',
     minHeight: '100vh',
     display: 'grid',
-    gridTemplate: `70px 1fr auto / 1fr`,
-    gap: '$6',
+    gridTemplate: `70px 1fr auto / 100%`,
+    gap: '$4',
   },
 
   '.active': {
@@ -104,7 +123,7 @@ export const globalStyles = globalCss({
   },
 
   '.flow > *:where(:not(:first-child)) ': {
-    marginTop: 'var(--flow-spacer, 1em)',
+    marginTop: 'var(--flow-spacer, .75em)',
   },
 
   '*,*::before,*::after': {

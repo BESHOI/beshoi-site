@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { styled } from 'stitches.config';
 
 export { NavLink };
 
@@ -13,6 +14,10 @@ NavLink.defaultProps = {
   exact: false,
 };
 
+export const StyledLink = styled('a', {
+  textDecoration: 'none',
+});
+
 function NavLink({ href, exact, children, ...props }) {
   const { pathname } = useRouter();
   const isActive = exact ? pathname === href : pathname.startsWith(href);
@@ -22,8 +27,8 @@ function NavLink({ href, exact, children, ...props }) {
   }
 
   return (
-    <Link href={href}>
-      <a {...props}>{children}</a>
+    <Link href={href} passHref>
+      <StyledLink {...props}>{children}</StyledLink>
     </Link>
   );
 }

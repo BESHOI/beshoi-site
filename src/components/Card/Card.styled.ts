@@ -1,4 +1,4 @@
-// import Image from 'next/image';
+import Image from 'next/image';
 import { styled } from 'stitches.config';
 
 export const CardsGrid = styled('div', {
@@ -37,7 +37,12 @@ export const CardSection = styled('div', {
 
 export const Card = styled('div', {
   borderRadius: '$3',
+});
+
+export const CardArticle = styled('article', {
+  borderRadius: '$3',
   // display: 'grid',
+  // width:'100%',
   // maxWidth: '500px',
   // mi: '$auto',
   // '@bp2': {
@@ -48,9 +53,9 @@ export const Card = styled('div', {
   //   py: '$2',
   //   px: '$3',
   // },
-  '& h3 , & p': {
-    mb: '$0',
-  },
+  // '& h3 , & p': {
+  //   mb: '$0',
+  // },
 });
 
 export const CardText = styled('div', {
@@ -79,12 +84,12 @@ export const CardImageContainer = styled('div', {
   height: '200px',
 });
 
-// export const CardImage = styled(Image, {
-//   width: '100%',
-//   cursor: 'pointer',
-//   borderBottomRightRadius: '$2',
-//   borderBottomLeftRadius: '$2',
-//   '@bp1': {
-//     borderRadius: '$2',
-//   },
-// });
+export const CardImage = styled(Image, {
+  width: '100%',
+  cursor: 'pointer',
+  borderBottomRightRadius: '$2',
+  borderBottomLeftRadius: '$2',
+  '@bp1': {
+    borderRadius: '$2',
+  },
+});

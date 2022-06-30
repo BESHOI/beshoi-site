@@ -62,7 +62,7 @@ export const Hi = () => {
     <HiSection>
       {/* <AvatarContainer>
         <Avatar
-          src="/img/Beshoi.jpg"
+          src="/imgs/Beshoi.jpg"
           alt="profile-picture"
           layout="fill"
           objectFit="contain"
@@ -70,7 +70,7 @@ export const Hi = () => {
         />
       </AvatarContainer> */}
       <Box>
-        <h1>
+        <h1 id="home">
           Hi, I&#39;m Beshoi <Wave>👋</Wave>
         </h1>
         <h2>Front End Developer</h2>

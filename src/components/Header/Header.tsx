@@ -29,7 +29,7 @@ const NavItem = styled('li', {
   },
 });
 
-const HeaderImg = styled(Image, {
+const Headerimg = styled(Image, {
   borderRadius: '$4',
 });
 
@@ -38,8 +38,8 @@ export const Header = (props: Props) => {
     <header>
       <Nav>
         <NavLink exact href="/">
-          <HeaderImg
-            src="/img/Beshoi.jpg"
+          <Headerimg
+            src="/imgs/Beshoi.jpg"
             alt="profile-picture"
             layout="fixed"
             width="50px"

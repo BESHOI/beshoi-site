@@ -17,7 +17,7 @@ const generateRSSFeed = (posts) => {
     id: 'http://beshoi.dev',
     link: 'http://beshoi.dev',
     language: 'en',
-    image: 'http://beshoi.dev/img/Beshoi.jpg',
+    image: 'https://beshoi.dev/imgs/Beshoi.jpg',
     // favicon: 'http://beshoi.dev/favicon.ico',
     copyright: `All rights reserved 2022, Beshoi Emad`,
     updated: new Date(),

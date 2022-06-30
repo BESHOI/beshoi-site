@@ -1,14 +1,18 @@
 import React from 'react';
 import { Header, Footer } from '..';
 
-type Props = {};
+type Props = {
+  children: React.ReactNode;
+};
 
-export const Layout: React.FC<Props> = ({ children }) => {
+export const Layout = ({ children }: Props) => {
   return (
-    <div className="container">
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <>
+      <div className="container">
+        <Header />
+        <main className="flow">{children}</main>
+        <Footer />
+      </div>
+    </>
   );
 };

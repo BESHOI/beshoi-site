@@ -1,6 +1,6 @@
 import React from 'react';
 import getPosts from 'scripts/fileSystem';
-import { Box, ColorfulHeader, PostItem } from 'components';
+import { Box, ColorfulHeader, Meta, PostItem } from 'components';
 import { BiLink } from 'react-icons/bi';
 import { styled } from 'stitches.config';
 import { CardsGrid } from 'components/Card/Card.styled';
@@ -41,38 +41,41 @@ const Link = styled('a', {
 
 const Tools = ({ SortedPosts }: SortedPosts) => {
   return (
-    <ToolsSection aria-labelledby="tools">
-      <Box>
+    <>
+      <Meta title="Tools - Beshoi Emad" description="My tools" />
+      <ToolsSection aria-labelledby="tools">
+        {/* <Box>
         <ColorfulHeader header="Tools" emoji="⛏" />
         <CardsGrid>
-          {SortedPosts.map(
+        {SortedPosts.map(
             (post) =>
-              post.data.tag === 'tools' && (
-                <PostItem key={post.slug} post={post} />
+            post.data.tag === 'tools' && (
+              <PostItem key={post.slug} post={post} />
               )
           )}
         </CardsGrid>
-      </Box>
+      </Box> */}
 
-      <Box>
-        <ColorfulHeader header="My Tools" emoji="📐" />
-        <Lists>
-          {ToolsData.map((item, index: number) => (
-            <Box key={index}>
-              <ListHeader>{item.title}</ListHeader>
-              <List css={{ mt: '$2' }}>
-                {item.list.map((tool: { name: string; link: string }) => (
-                  <ListItem key={tool.name}>
-                    <BiLink color="var(--colors-crimson9)" />
-                    <Link href={tool.link}>{tool.name}</Link>
-                  </ListItem>
-                ))}
-              </List>
-            </Box>
-          ))}
-        </Lists>
-      </Box>
-    </ToolsSection>
+        <Box>
+          <ColorfulHeader header="My Tools" emoji="📐" id="tools" />
+          <Lists>
+            {ToolsData.map((item, index: number) => (
+              <Box key={index} aria-labelledby={item.title}>
+                <ListHeader id={item.title}>{item.title}</ListHeader>
+                <List css={{ mt: '$2' }}>
+                  {item.list.map((tool: { name: string; link: string }) => (
+                    <ListItem key={tool.name}>
+                      <BiLink color="var(--colors-crimson9)" />
+                      <Link href={tool.link}>{tool.name}</Link>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            ))}
+          </Lists>
+        </Box>
+      </ToolsSection>
+    </>
   );
 };
 

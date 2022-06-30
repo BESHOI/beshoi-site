@@ -6,6 +6,7 @@ type Props = {
   header: string;
   emoji: string;
   css?: object;
+  id?: string;
 };
 
 export const GradientAnimation = keyframes({
@@ -62,7 +63,7 @@ const Colorful = () => {
   return { RandomColor, Angle };
 };
 
-export const ColorfulHeader = ({ header, emoji, css }: Props) => {
+export const ColorfulHeader = ({ header, emoji, id, css }: Props) => {
   const [firstcolor, setFirstcolor] = useState('$blue5');
   const [secondColor, setSecondcolor] = useState('$crimson8');
   const [angle, setAngle] = useState('45deg');
@@ -75,6 +76,7 @@ export const ColorfulHeader = ({ header, emoji, css }: Props) => {
   return (
     <Flex css={{ alignItems: 'center', gap: '$1' }}>
       <Header
+        id={id}
         css={{
           backgroundImage: `linear-gradient(${angle},${firstcolor}, ${secondColor} )`,
         }}

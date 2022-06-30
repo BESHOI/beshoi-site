@@ -1,4 +1,20 @@
 export const ToolsData = [
+  // Os
+  {
+    title: 'Os',
+    list: [
+      {
+        name: 'Windows',
+        link: '#',
+      },
+
+      {
+        name: 'EndeavourOS with i3wm',
+        link: 'https://endeavouros.com/',
+      },
+    ],
+  },
+
   // Browsing
   {
     title: 'Browsing',

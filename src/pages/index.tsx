@@ -1,10 +1,9 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import getPosts from 'scripts/fileSystem';
 import generateRSSFeed from 'scripts/rss';
 import { SortedPosts } from './blog';
-import { ColorfulHeader, Hi, PostItem } from 'components';
+import { Meta, Hi, ColorfulHeader, PostItem } from 'components';
 import { styled } from 'stitches.config';
 import { CardsGrid } from 'components/Card/Card.styled';
 
@@ -39,16 +38,15 @@ const Home: NextPage<SortedPosts> = ({ SortedPosts }) => {
 
   return (
     <HomeSection aria-labelledby="home">
-      <Head>
-        <title>Beshoi &#39;s Site</title>
-        <meta name="description" content="My personal site" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta
+        title="Beshoi Emad - Front End Developer"
+        description="Front End Developer"
+      />
 
       <Hi />
 
-      <Box>
-        <ColorfulHeader header="Latest Posts" emoji="📚" />
+      <Box aria-labelledby="posts" as="section" className="flow">
+        <ColorfulHeader header="Latest Posts" emoji="📚" id="posts" />
         <CardsGrid>
           {LatestPosts.map((post) => (
             <PostItem key={post.slug} post={post} />
@@ -60,8 +58,8 @@ const Home: NextPage<SortedPosts> = ({ SortedPosts }) => {
         </SeeMore>
       </Box>
 
-      <Box>
-        <ColorfulHeader header="LatestTools" emoji="⛏" />
+      <Box aria-labelledby="tools" as="section" className="flow">
+        <ColorfulHeader header="Latest Tools" emoji="⛏" id="tools" />
         <CardsGrid>
           {LatestTools.map((post) => (
             <PostItem key={post.slug} post={post} />
@@ -69,7 +67,7 @@ const Home: NextPage<SortedPosts> = ({ SortedPosts }) => {
         </CardsGrid>
 
         <SeeMore>
-          <Link href="/tools">See More Posts &#8599;</Link>
+          <Link href="/tools">See my tools &#8599;</Link>
         </SeeMore>
       </Box>
     </HomeSection>

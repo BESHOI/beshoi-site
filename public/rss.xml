@@ -4,13 +4,13 @@
         <title>Feed Title</title>
         <link>http://beshoi.dev</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 26 Jun 2022 14:30:51 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Jun 2022 15:45:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <language>en</language>
         <image>
             <title>Feed Title</title>
-            <url>http://beshoi.dev/imgs/Beshoi.jpg</url>
+            <url>https://beshoi.dev/imgs/Beshoi.jpg</url>
             <link>http://beshoi.dev</link>
         </image>
         <copyright>All rights reserved 2022, Beshoi Emad</copyright>

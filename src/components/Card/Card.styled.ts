@@ -35,11 +35,7 @@ export const CardSection = styled('div', {
   px: '$5',
 });
 
-export const Card = styled('div', {
-  borderRadius: '$3',
-});
-
-export const CardArticle = styled('article', {
+export const Card = styled('article', {
   borderRadius: '$3',
   // display: 'grid',
   // width:'100%',
@@ -81,7 +77,7 @@ export const CardParagraph = styled('p', { mb: '$0', mt: '$2' });
 export const CardImageContainer = styled('div', {
   position: 'relative',
   width: '100%',
-  height: '300px',
+  height: '200px',
 });
 
 export const CardImage = styled(Image, {

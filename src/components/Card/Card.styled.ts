@@ -81,7 +81,7 @@ export const CardParagraph = styled('p', { mb: '$0', mt: '$2' });
 export const CardImageContainer = styled('div', {
   position: 'relative',
   width: '100%',
-  height: '200px',
+  height: '300px',
 });
 
 export const CardImage = styled(Image, {

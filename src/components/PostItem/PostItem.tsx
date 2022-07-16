@@ -31,7 +31,7 @@ export const PostItem = ({ post }: Props) => {
         {/* <s.CardImageContainer>
           <Link href={`/blog/posts/${slug}`} passHref>
             <s.CardImage
-              src={`/img/posts/${img}`}
+              src={`/imgs/posts/${img}`}
               alt={title}
               layout="fill"
               objectFit="cover"

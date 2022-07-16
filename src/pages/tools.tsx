@@ -1,10 +1,8 @@
-import React from 'react';
-import getPosts from 'scripts/fileSystem';
-import { Box, ColorfulHeader, Meta, PostItem } from 'components';
-import { BiLink } from 'react-icons/bi';
-import { styled } from 'stitches.config';
-import { CardsGrid } from 'components/Card/Card.styled';
+import { Box, ColorfulHeader, Meta } from 'components';
 import { ToolsData } from 'components/Tools/ToolsData';
+import { BiLink } from 'react-icons/bi';
+// import getPosts from 'scripts/fileSystem';
+import { styled } from 'stitches.config';
 import { SortedPosts } from './blog';
 
 const ToolsSection = styled('section', {
@@ -20,6 +18,7 @@ const Lists = styled('div', {
 
 const List = styled('ul', {
   listStyle: 'none',
+  paddingInlineStart: '$4',
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit,minmax(200px,400px))',
   gap: '$2',
@@ -81,16 +80,16 @@ const Tools = ({ SortedPosts }: SortedPosts) => {
 
 export default Tools;
 
-export const getStaticProps = () => {
-  const posts = getPosts();
+// export const getStaticProps = () => {
+//   const posts = getPosts();
 
-  const SortedPosts = posts.sort((a, b) =>
-    new Date(a?.data.date) < new Date(b?.data.date) ? 1 : -1
-  );
+//   const SortedPosts = posts.sort((a, b) =>
+//     new Date(a?.data.date) < new Date(b?.data.date) ? 1 : -1
+//   );
 
-  return {
-    props: {
-      SortedPosts,
-    },
-  };
-};
+//   return {
+//     props: {
+//       SortedPosts,
+//     },
+//   };
+// };

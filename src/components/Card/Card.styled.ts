@@ -66,7 +66,7 @@ export const CardHeader = styled('h3', {
 });
 
 export const CardSmall = styled('span', {
-  mt: '$0',
+  margin: '$0 !important',
   color: '$slate11',
   fontSize: '$1',
   fontWeight: '$3',

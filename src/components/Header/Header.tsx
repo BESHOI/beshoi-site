@@ -1,17 +1,17 @@
-import React from 'react';
-import Image from 'next/image';
-import { navItems } from './NavItems';
-import { NavLink } from './NavLink';
-import { styled } from 'stitches.config';
+import React from 'react'
+import Image from 'next/image'
+import { navItems } from './NavItems'
+import { NavLink } from './NavLink'
+import { styled } from 'stitches.config'
 
-type Props = {};
+type Props = {}
 
 const Nav = styled('nav', {
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'center',
   justifyContent: 'space-between',
-});
+})
 
 const NavList = styled('ul', {
   p: '$0',
@@ -20,18 +20,18 @@ const NavList = styled('ul', {
   flexWrap: 'wrap',
   alignItems: 'center',
   gap: '$5',
-});
+})
 
 const NavItem = styled('li', {
   fontSize: '$2',
   '& img': {
     borderRadius: '100%',
   },
-});
+})
 
 const Headerimg = styled(Image, {
   borderRadius: '$4',
-});
+})
 
 export const Header = (props: Props) => {
   return (
@@ -59,5 +59,5 @@ export const Header = (props: Props) => {
         </NavList>
       </Nav>
     </header>
-  );
-};
+  )
+}

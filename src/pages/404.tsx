@@ -1,10 +1,10 @@
-import React from 'react';
-import { NotFound } from 'components';
+import React from 'react'
+import { NotFound } from 'components'
 
-type Props = {};
+type Props = {}
 
 const Custom404 = (props: Props) => {
-  return <NotFound />;
-};
+  return <NotFound />
+}
 
-export default Custom404;
+export default Custom404

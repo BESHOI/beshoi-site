@@ -1,12 +1,12 @@
-import type { AppProps } from 'next/app';
-import { globalStyles } from 'global';
-import { ThemeProvider } from 'next-themes';
-import { darkTheme } from 'stitches.config';
-import { Layout } from 'components';
-import 'atomOneDark.css';
+import type { AppProps } from 'next/app'
+import { globalStyles } from 'global'
+import { ThemeProvider } from 'next-themes'
+import { darkTheme } from 'stitches.config'
+import { Layout } from 'components'
+import 'atomOneDark.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  globalStyles();
+  globalStyles()
   return (
     <ThemeProvider
       attribute="class"
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

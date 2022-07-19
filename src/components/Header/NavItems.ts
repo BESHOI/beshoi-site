@@ -15,4 +15,4 @@ export const navItems = [
     link: '/rss.xml',
     name: 'Rss',
   },
-];
+]

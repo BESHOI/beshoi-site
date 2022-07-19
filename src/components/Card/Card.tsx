@@ -1,11 +1,11 @@
-import React from 'react';
-import { Flex } from 'components';
-import * as s from './Card.styled';
-import { about, experience } from './CardData';
+import React from 'react'
+import { Flex } from 'components'
+import * as s from './Card.styled'
+import { about, experience } from './CardData'
 
 type Props = {
-  data: string;
-};
+  data: string
+}
 
 export const Card = ({ data }: Props) => {
   return (
@@ -14,9 +14,7 @@ export const Card = ({ data }: Props) => {
         <s.CardsGrid>
           {about.map((item, index) => (
             <s.CardSection key={index}>
-              <s.CardParagraph>
-                {item.about}
-              </s.CardParagraph>
+              <s.CardParagraph>{item.about}</s.CardParagraph>
             </s.CardSection>
           ))}
         </s.CardsGrid>
@@ -31,13 +29,11 @@ export const Card = ({ data }: Props) => {
                 <s.CardSmall>/ {item.company}</s.CardSmall>
               </Flex>
               <s.CardHeader>{item.header}</s.CardHeader>
-              <s.CardParagraph >
-                {item.info}
-              </s.CardParagraph>
+              <s.CardParagraph>{item.info}</s.CardParagraph>
             </s.CardSection>
           ))}
         </s.CardsGrid>
       )}
     </>
-  );
-};
+  )
+}

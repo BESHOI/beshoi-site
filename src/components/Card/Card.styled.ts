@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { styled } from 'stitches.config';
+import Image from 'next/image'
+import { styled } from 'stitches.config'
 
 export const CardsGrid = styled('div', {
   display: 'grid',
@@ -27,13 +27,13 @@ export const CardsGrid = styled('div', {
       color: '$cyan11',
     },
   },
-});
+})
 
 export const CardSection = styled('div', {
   borderRadius: '$3',
   py: '$3',
   px: '$5',
-});
+})
 
 export const Card = styled('article', {
   borderRadius: '$3',
@@ -52,33 +52,33 @@ export const Card = styled('article', {
   // '& h3 , & p': {
   //   mb: '$0',
   // },
-});
+})
 
 export const CardText = styled('div', {
   // maxWidth: '55ch',
   py: '$3',
   px: '$3',
-});
+})
 
 export const CardHeader = styled('h3', {
   mb: '$0',
   mt: '$1',
-});
+})
 
 export const CardSmall = styled('span', {
   margin: '$0 !important',
   color: '$slate11',
   fontSize: '$1',
   fontWeight: '$3',
-});
+})
 
-export const CardParagraph = styled('p', { mb: '$0', mt: '$2' });
+export const CardParagraph = styled('p', { mb: '$0', mt: '$2' })
 
 export const CardImageContainer = styled('div', {
   position: 'relative',
   width: '100%',
   height: '200px',
-});
+})
 
 export const CardImage = styled(Image, {
   width: '100%',
@@ -88,4 +88,4 @@ export const CardImage = styled(Image, {
   '@bp1': {
     borderRadius: '$2',
   },
-});
+})

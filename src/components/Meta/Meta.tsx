@@ -1,26 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import React from 'react'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 type Props = {
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export const Meta = ({ title, description }: Props) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
       <Head>
         <meta charSet="UTF-8" key="charset" />
         <meta name="keywords" content={MetaInfo.content} />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-          key="viewport"
-        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
       </Head>
 
       <NextSeo
@@ -50,8 +46,8 @@ export const Meta = ({ title, description }: Props) => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
 const MetaInfo = {
   site_name: "Beshoi's site",
@@ -59,4 +55,4 @@ const MetaInfo = {
   content:
     'html, css, flex, grid, js, react, blog, tools, extensions, terminal, commandline, bash, zsh, powershell, linux, arch, i3wm, package manager, vim, neovim, tutorials, tips, tricks, Beshoi Emad',
   locale: 'en',
-};
+}

@@ -1,5 +1,5 @@
-import '../node_modules/modern-normalize/modern-normalize.css';
-import { globalCss, darkTheme } from 'stitches.config';
+import '../node_modules/modern-normalize/modern-normalize.css'
+import { globalCss, darkTheme } from 'stitches.config'
 
 export const globalStyles = globalCss({
   '@font-face': [
@@ -148,18 +148,17 @@ export const globalStyles = globalCss({
   '@dark': {
     ':root:not(.light)': {
       ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
-        const currentColor =
-          darkTheme.colors[currentColorKey as keyof typeof darkTheme.colors];
+        const currentColor = darkTheme.colors[currentColorKey as keyof typeof darkTheme.colors]
         const currentColorValue =
           currentColor.value.substring(0, 1) === '$'
             ? `$colors${currentColor.value}`
-            : currentColor.value;
+            : currentColor.value
 
         return {
           [currentColor.variable]: currentColorValue,
           ...varSet,
-        };
+        }
       }, {}),
     },
   },
-});
+})

@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
 
 type Props = {
-  src: string;
-  alt: string;
-};
+  src: string
+  alt: string
+}
 
 export const CoverImage = (props: Props) => {
   return (
@@ -17,9 +17,9 @@ export const CoverImage = (props: Props) => {
       objectFit="cover"
       priority
     />
-  );
-};
+  )
+}
 
 export const RegularImage = (props: Props) => {
-  return <Image src={props.src} alt={props.alt} width="900" height="200" />;
-};
+  return <Image src={props.src} alt={props.alt} width="900" height="200" />
+}

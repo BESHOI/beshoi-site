@@ -1,22 +1,22 @@
-import Link from 'next/link';
-import * as s from '../Card/Card.styled';
+import Link from 'next/link'
+import * as s from '../Card/Card.styled'
 
 type Props = {
   post: {
-    slug: string;
+    slug: string
     data: {
-      date: string;
-      title: string;
-      excerpt: string;
-      img: string;
-      tag: string;
-    };
-  };
-};
+      date: string
+      title: string
+      excerpt: string
+      img: string
+      tag: string
+    }
+  }
+}
 
 export const PostItem = ({ post }: Props) => {
-  const { slug } = post;
-  const { date, title, excerpt, img } = post.data;
+  const { slug } = post
+  const { date, title, excerpt, img } = post.data
 
   return (
     <s.Card as="article" key={post.slug}>
@@ -39,5 +39,5 @@ export const PostItem = ({ post }: Props) => {
         </Link>
       </s.CardImageContainer> */}
     </s.Card>
-  );
-};
+  )
+}

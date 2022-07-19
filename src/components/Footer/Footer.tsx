@@ -1,20 +1,20 @@
-import React from 'react';
-import { styled } from 'stitches.config';
-import { Stitches, NextJs, Vercel } from 'components';
+import React from 'react'
+import { styled } from 'stitches.config'
+import { Stitches, NextJs, Vercel } from 'components'
 
-type Props = {};
+type Props = {}
 
-const FooterSection = styled('footer', { mt: '$2' });
+const FooterSection = styled('footer', { mt: '$2' })
 
 const FooterReachMe = styled('p', {
   mt: '$2',
   mb: '$0',
-});
+})
 
 const Link = styled('a', {
   textDecoration: 'underline',
   fontWeight: '$3',
-});
+})
 
 const FooterMadeWith = styled('p', {
   display: 'flex',
@@ -23,7 +23,7 @@ const FooterMadeWith = styled('p', {
   flexWrap: 'wrap',
   mt: '$1',
   mb: '$2',
-});
+})
 
 export const Footer = (props: Props) => {
   return (
@@ -40,5 +40,5 @@ export const Footer = (props: Props) => {
         <Stitches /> hosted on <Vercel />
       </FooterMadeWith>
     </FooterSection>
-  );
-};
+  )
+}

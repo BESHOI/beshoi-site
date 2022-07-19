@@ -1,14 +1,14 @@
-import fs from 'fs';
-import { Feed } from 'feed';
+import fs from 'fs'
+import { Feed } from 'feed'
 
 const generateRSSFeed = (posts) => {
-  const blogUrl = 'https://beshoi.dev/blog';
-  const toolsUrl = 'https://beshoi.dev/tools';
+  const blogUrl = 'https://beshoi.dev/blog'
+  const toolsUrl = 'https://beshoi.dev/tools'
   const author = {
     name: 'Beshoi Emad',
     email: 'beshoiemad16@gmail.com',
     link: 'https://beshoi.dev',
-  };
+  }
 
   // Construct a new Feed object
   const feed = new Feed({
@@ -31,7 +31,7 @@ const generateRSSFeed = (posts) => {
       email: 'beshoiemad16@gmail.com',
       link: 'https://beshoi.dev',
     },
-  });
+  })
 
   // Add each article to the feed
   posts.forEach((post) => {
@@ -39,8 +39,8 @@ const generateRSSFeed = (posts) => {
       // content,
       slug,
       data: { date, excerpt, title, tag },
-    } = post;
-    const url = tag === 'tools' ? `${toolsUrl}/${slug}` : `${blogUrl}/${slug}`;
+    } = post
+    const url = tag === 'tools' ? `${toolsUrl}/${slug}` : `${blogUrl}/${slug}`
 
     feed.addItem({
       title,
@@ -50,10 +50,10 @@ const generateRSSFeed = (posts) => {
       // content,
       author: [author],
       date: new Date(date),
-    });
-  });
+    })
+  })
 
-  fs.writeFileSync('public/rss.xml', feed.rss2());
-};
+  fs.writeFileSync('public/rss.xml', feed.rss2())
+}
 
-export default generateRSSFeed;
+export default generateRSSFeed

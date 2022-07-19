@@ -1,20 +1,20 @@
-import { Box, ColorfulHeader, Meta } from 'components';
-import { ToolsData } from 'components/Tools/ToolsData';
-import { BiLink } from 'react-icons/bi';
+import { Box, ColorfulHeader, Meta } from 'components'
+import { ToolsData } from 'components/Tools/ToolsData'
+import { BiLink } from 'react-icons/bi'
 // import getPosts from 'scripts/fileSystem';
-import { styled } from 'stitches.config';
-import { SortedPosts } from './blog';
+import { styled } from 'stitches.config'
+import { SortedPosts } from './blog'
 
 const ToolsSection = styled('section', {
   display: 'grid',
   gridGap: '$7',
-});
+})
 
 const Lists = styled('div', {
   display: 'grid',
   gridGap: '$4',
   mt: '$4',
-});
+})
 
 const List = styled('ul', {
   listStyle: 'none',
@@ -22,9 +22,9 @@ const List = styled('ul', {
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit,minmax(200px,400px))',
   gap: '$2',
-});
+})
 
-const ListHeader = styled('h3', { m: '$0' });
+const ListHeader = styled('h3', { m: '$0' })
 
 const ListItem = styled('li', {
   display: 'grid',
@@ -32,11 +32,11 @@ const ListItem = styled('li', {
   alignItems: 'center',
   gridGap: '$2',
   fontSize: '$2',
-});
+})
 
 const Link = styled('a', {
   textDecoration: 'underline',
-});
+})
 
 const Tools = ({ SortedPosts }: SortedPosts) => {
   return (
@@ -75,10 +75,10 @@ const Tools = ({ SortedPosts }: SortedPosts) => {
         </Box>
       </ToolsSection>
     </>
-  );
-};
+  )
+}
 
-export default Tools;
+export default Tools
 
 // export const getStaticProps = () => {
 //   const posts = getPosts();

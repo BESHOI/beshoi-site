@@ -1,8 +1,8 @@
-import { keyframes, styled } from 'stitches.config';
-import { Box } from 'components';
-import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader';
+import { keyframes, styled } from 'stitches.config'
+import { Box } from 'components'
+import { GradientAnimation } from '../ColorfulHeader/ColorfulHeader'
 
-type Props = {};
+type Props = {}
 
 const HiSection = styled('div', {
   display: 'flex',
@@ -19,13 +19,12 @@ const HiSection = styled('div', {
     color: 'transparent',
     backgroundClip: 'text',
     '&:hover': {
-      backgroundImage:
-        'linear-gradient(-45deg,$crimson9,$blue9,$green9,$blue9)',
+      backgroundImage: 'linear-gradient(-45deg,$crimson9,$blue9,$green9,$blue9)',
       backgroundSize: '400%',
       animation: `${GradientAnimation} 2s linear infinite alternate`,
     },
   },
-});
+})
 
 // const AvatarContainer = styled('div', {
 //   position: 'relative',
@@ -50,12 +49,12 @@ const HiSection = styled('div', {
 const Rotate = keyframes({
   '0%': { transform: 'rotate(-45deg)' },
   '100%': { transform: 'rotate(0)' },
-});
+})
 
 const Wave = styled('div', {
   display: 'inline-block',
   animation: `${Rotate} 1s alternate`,
-});
+})
 
 export const Hi = () => {
   return (
@@ -76,5 +75,5 @@ export const Hi = () => {
         <h2>Front End Developer</h2>
       </Box>
     </HiSection>
-  );
-};
+  )
+}

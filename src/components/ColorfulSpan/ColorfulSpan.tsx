@@ -1,17 +1,13 @@
-import React from 'react';
-import { styled } from 'stitches.config';
+import React from 'react'
+import { styled } from 'stitches.config'
 
 type Props = {
-  text: string;
-  color: string;
-};
+  text: string
+  color: string
+}
 
-const Colorful = styled('span', {});
+const Colorful = styled('span', {})
 
 export const ColorfulSpan = ({ text, color }: Props) => {
-  return (
-    <Colorful css={{ backgroundColor: color }}>
-      {text}
-    </Colorful>
-  );
-};
+  return <Colorful css={{ backgroundColor: color }}>{text}</Colorful>
+}

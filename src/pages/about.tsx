@@ -1,12 +1,12 @@
-import React from 'react';
-import { Box, Card, ColorfulHeader, Grid, Meta } from 'components';
+import React from 'react'
+import { Box, Card, ColorfulHeader, Grid, Meta } from 'components'
 
-type Props = {};
+type Props = {}
 
 const About = (props: Props) => {
   return (
     <>
-      <Meta title="About me - Beshoi Emad"  description='About me'/>
+      <Meta title="About me - Beshoi Emad" description="About me" />
 
       <Grid css={{ mt: '$4', gap: '$7' }}>
         <Box as="section" aria-labelledby="about">
@@ -20,6 +20,6 @@ const About = (props: Props) => {
         </Box>
       </Grid>
     </>
-  );
-};
-export default About;
+  )
+}
+export default About

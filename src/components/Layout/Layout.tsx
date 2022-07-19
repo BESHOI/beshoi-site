@@ -1,9 +1,9 @@
-import React from 'react';
-import { Header, Footer } from '..';
+import React from 'react'
+import { Header, Footer } from '..'
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 export const Layout = ({ children }: Props) => {
   return (
@@ -14,5 +14,5 @@ export const Layout = ({ children }: Props) => {
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkPrism from 'remark-prism';
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkPrism from 'remark-prism'
 
 const nextConfig = {
   webpack: (config, options) => {
@@ -16,15 +16,15 @@ const nextConfig = {
           },
         },
       ],
-    });
+    })
 
-    return config;
+    return config
   },
   images: {
     formats: ['image/avif', 'image/webp'],
   },
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-};
+}
 
-export default nextConfig;
+export default nextConfig

@@ -14,8 +14,6 @@ export const globalStyles = globalCss({
     },
   ],
 
-  // '*,*::before,*::after': { margin: '0', padding: 0 },
-
   html: {
     scrollBehavior: 'smooth',
   },
@@ -101,10 +99,6 @@ export const globalStyles = globalCss({
     '& li + li': {
       mt: '$1',
     },
-  },
-
-  '#__next': {
-    minHeight: '100vh',
   },
 
   '.container': {

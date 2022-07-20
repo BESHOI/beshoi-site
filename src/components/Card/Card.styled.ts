@@ -49,9 +49,6 @@ export const Card = styled('article', {
   //   py: '$2',
   //   px: '$3',
   // },
-  // '& h3 , & p': {
-  //   mb: '$0',
-  // },
 })
 
 export const CardText = styled('div', {
@@ -61,7 +58,6 @@ export const CardText = styled('div', {
 })
 
 export const CardHeader = styled('h3', {
-  mb: '$0',
   mt: '$1',
 })
 
@@ -72,7 +68,7 @@ export const CardSmall = styled('span', {
   fontWeight: '$3',
 })
 
-export const CardParagraph = styled('p', { mb: '$0', mt: '$2' })
+export const CardParagraph = styled('p', { mt: '$2' })
 
 export const CardImageContainer = styled('div', {
   position: 'relative',

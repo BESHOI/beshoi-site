@@ -15,7 +15,6 @@ export const GradientAnimation = keyframes({
 })
 
 const Header = styled('h2', {
-  m: '$0',
   color: 'transparent',
   backgroundClip: 'text',
   '&:hover': {

@@ -28,7 +28,6 @@ const ImgContainer = styled('div', {
 const NotFoundPargraph = styled('p', {
   fontSize: '$$size',
   p: '$0',
-  m: '$0',
 })
 
 export const NotFound = (props: Props) => {

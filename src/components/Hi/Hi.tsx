@@ -10,10 +10,6 @@ const HiSection = styled('div', {
   gap: '$4',
   alignItems: 'center',
 
-  '& h1, & h2': {
-    m: '$0',
-  },
-
   '& h2': {
     backgroundImage: 'linear-gradient(-45deg,$crimson9,$blue9)',
     color: 'transparent',

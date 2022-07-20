@@ -24,14 +24,11 @@ const List = styled('ul', {
   gap: '$2',
 })
 
-const ListHeader = styled('h3', { m: '$0' })
-
 const ListItem = styled('li', {
   display: 'grid',
   gridTemplateColumns: '25px 1fr',
   alignItems: 'center',
   gridGap: '$2',
-  fontSize: '$2',
 })
 
 const Link = styled('a', {
@@ -60,7 +57,7 @@ const Tools = ({ SortedPosts }: SortedPosts) => {
           <Lists>
             {ToolsData.map((item, index: number) => (
               <Box key={index} aria-labelledby={item.title}>
-                <ListHeader id={item.title}>{item.title}</ListHeader>
+                <h3 id={item.title}>{item.title}</h3>
                 <List css={{ mt: '$2' }}>
                   {item.list.map((tool: { name: string; link: string }) => (
                     <ListItem key={tool.name}>

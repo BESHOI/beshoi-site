@@ -8,7 +8,6 @@ const FooterSection = styled('footer', { mt: '$2' })
 
 const FooterReachMe = styled('p', {
   mt: '$2',
-  mb: '$0',
 })
 
 const Link = styled('a', {

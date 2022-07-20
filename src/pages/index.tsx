@@ -10,9 +10,6 @@ import { CardsGrid } from 'components/Card/Card.styled'
 const HomeSection = styled('section', {
   display: 'grid',
   gridGap: '$4',
-  '& h1': {
-    mb: '$0',
-  },
 })
 
 const Box = styled('div', {

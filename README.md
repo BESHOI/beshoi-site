@@ -3,7 +3,7 @@
   <h1>Beshoi's site 💻</h1>
   <img src="./public/imgs/Beshoi.png" alt="vercel-logo" style="width: 75px; height:75px;">
  </div>
-  <p> Next.js + TypeScript + Mdx + Stitches + Utobia + Vercel </p>
+  <p> Next.js + TypeScript + Mdx + Stitches + Utopia + Vercel </p>
   <img src="./public/imgs/next-js.svg" alt="nextjs-logo" with="25" height="25">
   <img src="./public/imgs/typescript.svg" alt="typescript-logo" with="25" height="25">
   <img src="./public/imgs/mdx.svg" alt="mdx-logo" with="25" height="25">

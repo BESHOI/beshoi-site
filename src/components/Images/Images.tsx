@@ -4,6 +4,7 @@ import Image from 'next/image'
 type Props = {
   src: string
   alt: string
+  quality?: number
 }
 
 export const CoverImage = (props: Props) => {
@@ -15,6 +16,7 @@ export const CoverImage = (props: Props) => {
       height="400"
       layout="responsive"
       objectFit="cover"
+      quality={props.quality}
       priority
     />
   )

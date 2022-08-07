@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
 
 type Props = {
   title: string
@@ -10,6 +9,14 @@ type Props = {
 
 export const Meta = ({ title, description }: Props) => {
   const router = useRouter()
+  const MetaInfo = {
+    title: 'Beshoi Emad - Front End Developer',
+    description: `Front-end developer, Tech Reviewer, and It Stuff.`,
+    content:
+      'html, css, flex, grid, js, react, blog, tools, extensions, terminal, commandline, bash, zsh, powershell, linux, arch, i3wm, package manager, vim, neovim, tutorials, tips, tricks, Beshoi Emad',
+    image: 'https://beshoi.dev/imgs/beshoi.jpg',
+    type: 'website',
+  }
 
   return (
     <>
@@ -17,42 +24,23 @@ export const Meta = ({ title, description }: Props) => {
         <meta charSet="UTF-8" key="charset" />
         <meta name="keywords" content={MetaInfo.content} />
         <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
+        <title>{title ? title : MetaInfo.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={description ? description : MetaInfo.description} name="description" />
+        <meta property="og:url" content={`https://beshoi.dev${router.asPath}`} />
+        <link rel="canonical" href={`https://beshoi.dev${router.asPath}`} />
+        <meta property="og:type" content={MetaInfo.type} />
+        <meta property="og:site_name" content="Beshoi Emad" />
+        <meta property="og:description" content={MetaInfo.description} />
+        <meta property="og:title" content={MetaInfo.title} />
+        <meta property="og:image" content={MetaInfo.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@beshoi_emad" />
+        <meta name="twitter:title" content={MetaInfo.title} />
+        <meta name="twitter:description" content={MetaInfo.description} />
+        <meta name="twitter:image" content={MetaInfo.image} />
+        {/* {MetaInfo.date && <meta property="article:published_time" content={MetaInfo.date} />} */}
       </Head>
-
-      <NextSeo
-        title={title ? title : MetaInfo.title}
-        description={description ? description : MetaInfo.content}
-        canonical={`https://beshoi.dev${router.asPath}/`}
-        openGraph={{
-          title: title ? title : MetaInfo.title,
-          description: description ? description : MetaInfo.content,
-          url: `https://beshoi.dev${router.asPath}/`,
-          images: [
-            {
-              url: 'https://www.beshoi.dev/imgs/beshoi.jpg',
-              width: 400,
-              height: 400,
-              alt: 'Og Image Alt',
-              type: 'image/jpeg',
-            },
-          ],
-          locale: MetaInfo.locale,
-          site_name: MetaInfo.site_name,
-        }}
-        twitter={{
-          handle: '@beshoi_emad',
-          site: '@beshoi_emad',
-          cardType: 'summary_large_image',
-        }}
-      />
     </>
   )
-}
-
-const MetaInfo = {
-  site_name: "Beshoi's site",
-  title: 'Beshoi Emad - Front End Developer',
-  content:
-    'html, css, flex, grid, js, react, blog, tools, extensions, terminal, commandline, bash, zsh, powershell, linux, arch, i3wm, package manager, vim, neovim, tutorials, tips, tricks, Beshoi Emad',
-  locale: 'en',
 }

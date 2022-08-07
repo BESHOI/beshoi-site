@@ -13,7 +13,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.5",
     "@mdx-js/loader": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
     "@radix-ui/colors": "^0.1.8",
@@ -23,7 +22,6 @@
     "gray-matter": "^4.0.3",
     "modern-normalize": "^1.1.0",
     "next": "12.2.2",
-    "next-pwa": "^5.5.2",
     "next-seo": "^5.4.0",
     "next-themes": "^0.1.1",
     "react": "18.2.0",

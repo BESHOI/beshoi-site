@@ -1,6 +1,6 @@
  <div align="center">
  <div>
-  <h1>Beshoi's site 💻</h1>
+  <h1>beshoi.dev 💻</h1>
   <img src="./public/imgs/Beshoi.png" alt="vercel-logo" style="width: 75px; height:75px;">
  </div>
   <p> Next.js + TypeScript + Mdx + Stitches + Utopia + Vercel </p>
@@ -21,8 +21,7 @@ This repo created with:
 - ✨ TypeScript
 - 💎 Stitches
 - 🚀 Zero Media Queries
-- 🔥 Next Seo
-- 📃 Mdx
+- 🔥 Mdx
 - 📡 Rss
 - 🗺 Site Map
 - 📈 Absolute Import

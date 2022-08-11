@@ -10,7 +10,7 @@ export const ToolsData = [
 
       {
         name: 'EndeavourOS with i3wm',
-        link: 'https://endeavouros.com/',
+        link: 'https://endeavouros.com',
       },
     ],
   },
@@ -132,6 +132,11 @@ export const ToolsData = [
       },
 
       {
+        name: 'Prisma',
+        link: 'https://marketplace.visualstudio.com/items?itemName=Prisma.prisma',
+      },
+
+      {
         name: 'Path Intellisense',
         link: 'https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense',
       },
@@ -169,6 +174,47 @@ export const ToolsData = [
       {
         name: 'Vscode MDX',
         link: 'https://marketplace.visualstudio.com/items?itemName=JounQin.vscode-mdx',
+      },
+    ],
+  },
+
+  // Freameworks
+  {
+    title: 'Freameworks & Libraries',
+    list: [
+      {
+        name: 'React',
+        link: 'https://beta.reactjs.org',
+      },
+
+      {
+        name: 'Solidjs',
+        link: 'https://solidjs.com',
+      },
+
+      {
+        name: 'Nextjs',
+        link: 'https://nextjs.org',
+      },
+
+      {
+        name: 'Stitches',
+        link: 'https://stitches.dev',
+      },
+
+      {
+        name: 'Sass',
+        link: 'https://sass-lang.com',
+      },
+
+      {
+        name: 'Tailwindcss',
+        link: 'https://tailwindcss.com',
+      },
+
+      {
+        name: 'Twind',
+        link: 'https://twind.dev',
       },
     ],
   },

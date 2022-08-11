@@ -1,4 +1,3 @@
-import '../node_modules/modern-normalize/modern-normalize.css'
 import { globalCss, darkTheme } from 'stitches.config'
 
 export const globalStyles = globalCss({
@@ -47,26 +46,32 @@ export const globalStyles = globalCss({
     fontWeight: '$7',
     letterSpacing: '-1px',
   },
+
   h2: {
     fontSize: '$4',
     fontWeight: '$6',
   },
+
   h3: {
     fontSize: '$3',
     fontWeight: '$5',
   },
+
   h4: {
     fontSize: '$3',
     fontWeight: '$4',
   },
+
   h5: {
     fontSize: '$3',
     fontWeight: '$4',
   },
+
   h6: {
     fontSize: '$2',
     fontWeight: '$3',
   },
+
   'p, li': {
     fontSize: '$2',
   },

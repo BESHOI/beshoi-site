@@ -3,6 +3,7 @@ import { globalStyles } from 'global'
 import { ThemeProvider } from 'next-themes'
 import { darkTheme } from 'stitches.config'
 import { Layout } from 'components'
+import '../../node_modules/modern-normalize/modern-normalize.css'
 import 'atomOneDark.css'
 
 function MyApp({ Component, pageProps }: AppProps) {

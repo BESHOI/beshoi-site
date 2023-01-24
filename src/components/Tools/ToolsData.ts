@@ -23,50 +23,97 @@ export const ToolsData = [
         name: 'Gh',
         link: 'https://cli.github.com/',
       },
-
       {
         name: 'Yt-dlp',
         link: 'https://github.com/yt-dlp/yt-dlp',
       },
-
       {
         name: 'Mpv',
         link: 'https://github.com/mpv-player/mpv',
       },
-
       {
         name: 'Fzf',
         link: 'https://github.com/junegunn/fzf',
       },
-
       {
         name: 'Ytfzf',
         link: 'https://github.com/pystardust/ytfzf',
       },
-
-      {
-        name: 'Neovim',
-        link: 'https://github.com/neovim/neovim',
-      },
-
+      // {
+      //   name: 'Neovim',
+      //   link: 'https://github.com/neovim/neovim',
+      // },
       {
         name: 'Squoosh',
         link: 'https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli',
       },
-
       {
         name: 'Wttr.in',
         link: 'https://github.com/chubin/wttr.in',
       },
-
       {
         name: 'Buku',
         link: 'https://github.com/jarun/buku',
       },
-
       {
         name: 'Qalculate',
         link: 'https://qalculate.github.io/',
+      },
+      {
+        name: 'Exa',
+        link: 'https://github.com/ogham/exa',
+      },
+      {
+        name: 'Bat',
+        link: 'https://github.com/sharkdp/bat',
+      },
+      {
+        name: 'Zoxide',
+        link: 'https://github.com/ajeetdsouza/zoxide',
+      },
+      {
+        name: 'Xclip',
+        link: 'https://github.com/astrand/xclip',
+      },
+      {
+        name: 'Maim',
+        link: 'https://github.com/naelstrof/maim',
+      },
+      {
+        name: 'Tsp',
+        link: 'https://github.com/justanhduc/task-spooler',
+      },
+      {
+        name: 'Playerctl',
+        link: 'https://github.com/altdesktop/playerctl',
+      },
+      {
+        name: 'Mpv-paris',
+        link: 'https://github.com/hoyon/mpv-mpris',
+      },
+      {
+        name: 'Clifm',
+        link: 'https://github.com/leo-arch/clifm',
+      },
+      {
+        name: 'Zathura',
+        link: 'https://archlinux.org/packages/community/x86_64/zathura/',
+      },
+      {
+        name: 'Feh',
+        link: 'https://github.com/derf/feh',
+      },
+      {
+        name: 'Nvm',
+        link: 'https://github.com/nvm-sh/nvm',
+      },
+      {
+        name: 'Enter',
+        link: 'https://github.com/eradman/entr',
+      },
+      {
+        name: 'Ripgrep',
+        link: 'https://github.com/BurntSushi/ripgrep',
       },
     ],
   },
@@ -101,7 +148,7 @@ export const ToolsData = [
       },
 
       {
-        name: "I don't care cookies",
+        name: 'Vimium',
         link: '#',
       },
     ],
@@ -115,65 +162,53 @@ export const ToolsData = [
         name: 'Visual Studio Code',
         link: '#',
       },
-
       {
         name: 'Atom one Dark Theme',
         link: 'https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark',
       },
-
       {
         name: 'Ariake Dark',
         link: 'https://marketplace.visualstudio.com/items?itemName=wart.ariake-dark',
       },
-
       {
         name: 'Deno',
         link: 'https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno',
       },
-
       {
         name: 'Prisma',
         link: 'https://marketplace.visualstudio.com/items?itemName=Prisma.prisma',
       },
-
       {
         name: 'Path Intellisense',
         link: 'https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense',
       },
-
       {
         name: 'Prettier',
         link: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
       },
-
-      {
-        name: 'Sass Intellisense',
-        link: 'https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss',
-      },
-
       {
         name: 'Auto Rename Tag',
         link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag',
       },
-
       {
         name: 'Color Highlight',
         link: 'https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight',
       },
-
-      {
-        name: 'Css Var Complete',
-        link: 'https://marketplace.visualstudio.com/items?itemName=phoenisx.cssvar',
-      },
-
       {
         name: 'Markdown All in One',
         link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one',
       },
-
       {
         name: 'Vscode MDX',
         link: 'https://marketplace.visualstudio.com/items?itemName=JounQin.vscode-mdx',
+      },
+      {
+        name: 'Eye Care',
+        link: 'https://marketplace.visualstudio.com/items?itemName=anupkmr0311.eyecare',
+      },
+      {
+        name: 'Template String Converter',
+        link: 'https://marketplace.visualstudio.com/items?itemName=meganrogge.template-string-converter',
       },
     ],
   },
@@ -227,7 +262,10 @@ export const ToolsData = [
         name: 'Squoosh (compress images)',
         link: 'https://squoosh.app/',
       },
-
+      {
+        name: 'Imagecompressor (compress images)',
+        link: 'https://www.websiteplanet.com/webtools/imagecompressor/',
+      },
       {
         name: 'loremflickr (Generate dummy Images)',
         link: 'https://loremflickr.com/',

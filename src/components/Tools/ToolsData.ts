@@ -4,11 +4,6 @@ export const ToolsData = [
     title: 'Os',
     list: [
       {
-        name: 'Windows',
-        link: '#',
-      },
-
-      {
         name: 'EndeavourOS with i3wm',
         link: 'https://endeavouros.com',
       },
@@ -19,10 +14,6 @@ export const ToolsData = [
   {
     title: 'Terminal Tools',
     list: [
-      {
-        name: 'Gh',
-        link: 'https://cli.github.com/',
-      },
       {
         name: 'Yt-dlp',
         link: 'https://github.com/yt-dlp/yt-dlp',
@@ -39,25 +30,9 @@ export const ToolsData = [
         name: 'Ytfzf',
         link: 'https://github.com/pystardust/ytfzf',
       },
-      // {
-      //   name: 'Neovim',
-      //   link: 'https://github.com/neovim/neovim',
-      // },
-      {
-        name: 'Squoosh',
-        link: 'https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli',
-      },
-      {
-        name: 'Wttr.in',
-        link: 'https://github.com/chubin/wttr.in',
-      },
       {
         name: 'Buku',
         link: 'https://github.com/jarun/buku',
-      },
-      {
-        name: 'Qalculate',
-        link: 'https://qalculate.github.io/',
       },
       {
         name: 'Exa',
@@ -92,6 +67,14 @@ export const ToolsData = [
         link: 'https://github.com/hoyon/mpv-mpris',
       },
       {
+        name: 'Lf',
+        link: 'https://github.com/gokcehan/lf',
+      },
+      {
+        name: 'Ctpv',
+        link: 'https://github.com/NikitaIvanovV/ctpv',
+      },
+      {
         name: 'Clifm',
         link: 'https://github.com/leo-arch/clifm',
       },
@@ -104,8 +87,12 @@ export const ToolsData = [
         link: 'https://github.com/derf/feh',
       },
       {
-        name: 'Nvm',
-        link: 'https://github.com/nvm-sh/nvm',
+        name: 'Fd',
+        link: 'https://github.com/sharkdp/fd',
+      },
+      {
+        name: 'Trash-cli',
+        link: 'https://github.com/andreafrancia/trash-cli',
       },
       {
         name: 'Enter',
@@ -126,27 +113,22 @@ export const ToolsData = [
         name: 'Firefox',
         link: '#',
       },
-
       {
         name: 'Google Chrome',
         link: '#',
       },
-
-      {
-        name: 'Ungoogled Chromium',
-        link: 'https://github.com/ungoogled-software/ungoogled-chromium',
-      },
-
+      // {
+      //   name: 'Ungoogled Chromium',
+      //   link: 'https://github.com/ungoogled-software/ungoogled-chromium',
+      // },
       {
         name: 'Ublockorigin',
         link: '#',
       },
-
       {
         name: 'Bitwarden',
         link: '#',
       },
-
       {
         name: 'Vimium',
         link: '#',
@@ -156,60 +138,82 @@ export const ToolsData = [
 
   // Development
   {
+
     title: 'Development',
     list: [
       {
-        name: 'Visual Studio Code',
-        link: '#',
+        name: 'Tmux',
+        link: 'https://github.com/tmux/tmux',
       },
       {
-        name: 'Atom one Dark Theme',
-        link: 'https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark',
+        name: 'Gh',
+        link: 'https://cli.github.com/',
       },
       {
-        name: 'Ariake Dark',
-        link: 'https://marketplace.visualstudio.com/items?itemName=wart.ariake-dark',
+        name: 'Nvm',
+        link: 'https://github.com/nvm-sh/nvm',
       },
       {
-        name: 'Deno',
-        link: 'https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno',
+        name: 'LunarVim',
+        link: 'https://github.com/LunarVim/LunarVim',
       },
       {
-        name: 'Prisma',
-        link: 'https://marketplace.visualstudio.com/items?itemName=Prisma.prisma',
+        name: 'Fnm',
+        link: 'https://github.com/Schniz/fnm',
       },
-      {
-        name: 'Path Intellisense',
-        link: 'https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense',
-      },
-      {
-        name: 'Prettier',
-        link: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
-      },
-      {
-        name: 'Auto Rename Tag',
-        link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag',
-      },
-      {
-        name: 'Color Highlight',
-        link: 'https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight',
-      },
-      {
-        name: 'Markdown All in One',
-        link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one',
-      },
-      {
-        name: 'Vscode MDX',
-        link: 'https://marketplace.visualstudio.com/items?itemName=JounQin.vscode-mdx',
-      },
-      {
-        name: 'Eye Care',
-        link: 'https://marketplace.visualstudio.com/items?itemName=anupkmr0311.eyecare',
-      },
-      {
-        name: 'Template String Converter',
-        link: 'https://marketplace.visualstudio.com/items?itemName=meganrogge.template-string-converter',
-      },
+
+      //     {
+      //       name: 'Visual Studio Code',
+      //       link: '#',
+      //     },
+      //     {
+      //       name: 'Atom one Dark Theme',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark',
+      //     },
+      //     {
+      //       name: 'Ariake Dark',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=wart.ariake-dark',
+      //     },
+      //     {
+      //       name: 'Deno',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno',
+      //     },
+      //     {
+      //       name: 'Prisma',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=Prisma.prisma',
+      //     },
+      //     {
+      //       name: 'Path Intellisense',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense',
+      //     },
+      //     {
+      //       name: 'Prettier',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode',
+      //     },
+      //     {
+      //       name: 'Auto Rename Tag',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag',
+      //     },
+      //     {
+      //       name: 'Color Highlight',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight',
+      //     },
+      //     {
+      //       name: 'Markdown All in One',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one',
+      //     },
+      //     {
+      //       name: 'Vscode MDX',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=JounQin.vscode-mdx',
+      //     },
+      //     {
+      //       name: 'Eye Care',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=anupkmr0311.eyecare',
+      //     },
+      //     {
+      //       name: 'Template String Converter',
+      //       link: 'https://marketplace.visualstudio.com/items?itemName=meganrogge.template-string-converter',
+      // },
     ],
   },
 
@@ -219,7 +223,7 @@ export const ToolsData = [
     list: [
       {
         name: 'React',
-        link: 'https://beta.reactjs.org',
+        link: 'https://react.dev',
       },
 
       {
@@ -229,7 +233,7 @@ export const ToolsData = [
 
       {
         name: 'Nextjs',
-        link: 'https://nextjs.org',
+        link: 'https://beta.nextjs.org/docs',
       },
 
       {
@@ -249,7 +253,7 @@ export const ToolsData = [
 
       {
         name: 'Twind',
-        link: 'https://twind.dev',
+        link: 'https://twind.style/',
       },
     ],
   },
